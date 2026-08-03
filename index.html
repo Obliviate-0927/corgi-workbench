@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🐕 柯基财税工作台</title>
+<style>
+  :root{
+    --bg:#FFF7EC; --panel:#FFFFFF; --panel-2:#FFF0DC; --text:#5B4636;
+    --text-2:#9C8772; --border:#F0DCC2; --accent:#E8924A; --accent-soft:#FCEBD8;
+    --green:#5BA86B; --red:#E8745B; --amber:#E9A23B; --pink:#F2A6B8;
+    --shadow:0 4px 16px rgba(180,120,60,.10); --radius:18px;
+  }
+  [data-theme="dark"]{
+    --bg:#241F1A; --panel:#322B24; --panel-2:#3C332B; --text:#F3E9DC; --text-2:#B7A48F;
+    --border:#4A3F34; --accent:#F0A35E; --accent-soft:#43342a;
+    --green:#6FBE7E; --red:#F08A72; --amber:#F0B45E; --pink:#D98AA0;
+    --shadow:0 4px 20px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .app{display:flex;flex-direction:column;height:100vh;overflow:hidden}
+  /* top bar */
+  .topbar{display:flex;align-items:center;gap:14px;padding:10px 18px;background:var(--panel);
+    border-bottom:1px solid var(--border);flex-shrink:0;position:relative}
+  .topbar::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:7px;
+    background:repeating-linear-gradient(90deg,var(--accent) 0 14px,transparent 14px 28px);opacity:.18}
+  .logo{font-size:18px;font-weight:800;display:flex;align-items:center;gap:8px;white-space:nowrap;color:var(--text)}
+  .logo .dog{font-size:22px;display:inline-block;animation:wag 2.4s ease-in-out infinite;transform-origin:70% 60%}
+  @keyframes wag{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(8deg)}}
+  .clock{font-variant-numeric:tabular-nums;color:var(--text-2);font-size:13px;white-space:nowrap}
+  .search{flex:1;max-width:420px;position:relative}
+  .search input{width:100%;padding:8px 12px 8px 32px;border:2px solid var(--border);
+    border-radius:22px;background:var(--panel-2);color:var(--text);outline:none;font-size:13px;transition:.15s}
+  .search input:focus{border-color:var(--accent);background:var(--panel)}
+  .search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.5}
+  .top-actions{margin-left:auto;display:flex;gap:8px}
+  .icon-btn{width:34px;height:34px;border:2px solid var(--border);border-radius:12px;background:var(--panel-2);
+    color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:.15s}
+  .icon-btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  /* body */
+  .body{flex:1;display:flex;overflow:hidden}
+  .sidebar{width:218px;background:var(--panel);border-right:1px solid var(--border);
+    padding:16px 10px;display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+  .nav-item{display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:13px;cursor:pointer;
+    color:var(--text-2);font-weight:600;user-select:none;transition:.15s;border:2px solid transparent}
+  .nav-item:hover{background:var(--panel-2);color:var(--text)}
+  .nav-item.active{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+  .nav-item .badge{margin-left:auto;background:var(--panel-2);color:var(--text-2);font-size:11px;
+    padding:1px 8px;border-radius:10px;min-width:22px;text-align:center}
+  .nav-item.active .badge{background:var(--accent);color:#fff}
+  .side-foot{margin-top:auto;padding:10px 12px;color:var(--text-2);font-size:11px;border-top:1px solid var(--border);line-height:1.6}
+  .content{flex:1;overflow-y:auto;padding:22px 28px}
+  .module-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+  .module-head h1{font-size:21px;font-weight:800}
+  .module-head .sub{color:var(--text-2);font-size:13px}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:13px;border:2px solid var(--accent);
+    background:var(--accent);color:#fff;cursor:pointer;font-size:13px;font-weight:700;transition:.15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn.ghost{background:var(--panel);color:var(--accent);border-color:var(--border)}
+  .btn.ghost:hover{border-color:var(--accent)}
+  .spacer{margin-left:auto}
+  /* quick add */
+  .quick{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+  .quick input[type=text]{flex:1;min-width:240px;padding:12px 14px;border:2px solid var(--border);border-radius:13px;
+    background:var(--panel);color:var(--text);font-size:14px;outline:none;transition:.15s}
+  .quick input[type=text]:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .quick select{padding:0 10px;border:2px solid var(--border);border-radius:13px;background:var(--panel);color:var(--text);outline:none}
+  .quick input[type=date]{padding:0 10px;border:2px solid var(--border);border-radius:13px;background:var(--panel);color:var(--text);outline:none}
+  .filters{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+  .chip{padding:6px 14px;border-radius:18px;border:2px solid var(--border);background:var(--panel);
+    color:var(--text-2);cursor:pointer;font-size:13px;font-weight:600;transition:.15s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  /* todo list */
+  .todo-list{display:flex;flex-direction:column;gap:8px}
+  .todo{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--panel);
+    border:2px solid var(--border);border-radius:14px;box-shadow:var(--shadow);cursor:default;transition:.15s}
+  .todo:hover{border-color:var(--accent-soft)}
+  .todo.dragging{opacity:.4}
+  .todo .grip{cursor:grab;color:var(--text-2);font-size:14px;user-select:none}
+  .cb{width:20px;height:20px;border-radius:50%;border:2px solid var(--border);cursor:pointer;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;transition:.15s}
+  .cb:hover{border-color:var(--accent)}
+  .todo.done .cb{background:var(--green);border-color:var(--green)}
+  .todo.done .cb::after{content:"✓";color:#fff;font-size:12px}
+  .todo.done .t-text{text-decoration:line-through;color:var(--text-2)}
+  .t-main{flex:1;min-width:0}
+  .t-text{font-size:14px;word-break:break-word;font-weight:500}
+  .t-meta{display:flex;gap:8px;margin-top:5px;flex-wrap:wrap;align-items:center}
+  .tag{font-size:11px;padding:1px 8px;border-radius:8px;background:var(--panel-2);color:var(--text-2);font-weight:600}
+  .pri{font-size:11px;padding:1px 8px;border-radius:8px;font-weight:700}
+  .pri.high{background:#FFE3DA;color:var(--red)}
+  .pri.mid{background:#FCEBCF;color:var(--amber)}
+  .pri.low{background:#DFF3E5;color:var(--green)}
+  [data-theme="dark"] .pri.high{background:#4a2a23;color:#ff9384}
+  [data-theme="dark"] .pri.mid{background:#463821;color:#ffc06a}
+  [data-theme="dark"] .pri.low{background:#1f3a29;color:#7cd39a}
+  .due{font-size:11px;padding:1px 8px;border-radius:8px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+  .due.overdue{background:#FFE3DA;color:var(--red)}
+  .due.soon{background:#FCEBCF;color:var(--amber)}
+  .t-shot{margin-top:8px;max-width:150px;max-height:95px;border-radius:10px;border:2px solid var(--border);display:block;cursor:zoom-in}
+  .row-actions{display:flex;gap:4px;opacity:0;transition:.15s}
+  .todo:hover .row-actions,.bm-card:hover .row-actions,.note:hover .row-actions{opacity:1}
+  .mini{width:28px;height:28px;border:2px solid var(--border);border-radius:9px;background:var(--panel);
+    color:var(--text-2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:.15s}
+  .mini:hover{border-color:var(--accent);color:var(--accent)}
+  .mini.danger:hover{border-color:var(--red);color:var(--red)}
+  /* bookmark grid */
+  .bm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+  .bm-card{background:var(--panel);border:2px solid var(--border);border-radius:14px;overflow:hidden;
+    box-shadow:var(--shadow);cursor:pointer;transition:.15s;position:relative;text-decoration:none;color:inherit}
+  .bm-card:hover{transform:translateY(-3px);border-color:var(--accent-soft);box-shadow:0 10px 24px rgba(180,120,60,.18)}
+  .bm-shot{width:100%;height:120px;object-fit:cover;background:var(--panel-2);display:block}
+  .bm-shot.ph{display:flex;align-items:center;justify-content:center;font-size:34px;color:#fff;font-weight:800}
+  .bm-body{padding:10px 12px}
+  .bm-title{font-weight:700;font-size:14px;display:flex;align-items:center;gap:7px}
+  .bm-fav{width:18px;height:18px;border-radius:6px;display:flex;align-items:center;justify-content:center;
+    font-size:10px;color:#fff;font-weight:800;flex-shrink:0}
+  .bm-domain{color:var(--text-2);font-size:12px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bm-cat{display:inline-block;margin-top:7px;font-size:11px;padding:1px 8px;border-radius:8px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+  .bm-card .row-actions{position:absolute;top:8px;right:8px;background:var(--panel);border-radius:9px;padding:2px}
+  /* notes */
+  .note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+  .note{background:var(--panel);border:2px solid var(--border);border-radius:14px;padding:14px;box-shadow:var(--shadow);
+    display:flex;flex-direction:column;min-height:120px;position:relative;transition:.15s}
+  .note:hover{border-color:var(--accent-soft)}
+  .note h3{font-size:15px;margin-bottom:6px;word-break:break-word;font-weight:700}
+  .note p{color:var(--text-2);font-size:13px;white-space:pre-wrap;word-break:break-word;flex:1}
+  .note .ndate{font-size:11px;color:var(--text-2);margin-top:8px}
+  .note .row-actions{position:absolute;top:10px;right:10px;background:var(--panel);border-radius:9px;padding:2px}
+  .empty{text-align:center;color:var(--text-2);padding:60px 20px}
+  .empty .big{font-size:46px;margin-bottom:10px}
+  /* modal */
+  .mask{position:fixed;inset:0;background:rgba(60,40,20,.4);display:none;align-items:center;justify-content:center;z-index:50}
+  .mask.show{display:flex}
+  #lbimg{max-width:90vw;max-height:85vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .modal{background:var(--panel);border-radius:18px;padding:22px;width:460px;max-width:92vw;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3);border:2px solid var(--border)}
+  .modal h2{font-size:18px;margin-bottom:16px;font-weight:800}
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:13px;color:var(--text-2);margin-bottom:5px;font-weight:600}
+  .field input[type=text],.field input[type=date],.field input[type=number],.field select,.field textarea{
+    width:100%;padding:9px 11px;border:2px solid var(--border);border-radius:11px;background:var(--panel-2);
+    color:var(--text);outline:none;font-size:14px;font-family:inherit}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);background:var(--panel)}
+  .field textarea{resize:vertical;min-height:90px}
+  .shot-prev{width:100%;height:130px;object-fit:cover;border-radius:11px;border:2px solid var(--border);margin-top:6px;display:none}
+  .modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:8px}
+  .hint{font-size:12px;color:var(--text-2);margin-top:4px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);
+    padding:10px 18px;border-radius:12px;font-size:13px;z-index:90;opacity:0;transition:.25s;pointer-events:none;font-weight:600}
+  .toast.show{opacity:1}
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:6px}
+
+  /* ===== 财税计算器 ===== */
+  .calc-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+  .calc-tab{padding:9px 16px;border-radius:13px;border:2px solid var(--border);background:var(--panel);
+    color:var(--text-2);cursor:pointer;font-weight:700;font-size:13px;transition:.15s}
+  .calc-tab:hover{border-color:var(--accent);color:var(--accent)}
+  .calc-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.calc-wrap{grid-template-columns:1fr}}
+  .calc-card{background:var(--panel);border:2px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+  .calc-card h3{font-size:15px;margin-bottom:14px;font-weight:800;display:flex;align-items:center;gap:8px}
+  .inp{display:flex;align-items:center;gap:8px;margin-bottom:11px}
+  .inp label{flex:1;font-size:13px;color:var(--text-2);font-weight:600}
+  .inp input,.inp select{width:140px;padding:8px 10px;border:2px solid var(--border);border-radius:10px;
+    background:var(--panel-2);color:var(--text);outline:none;font-size:14px;text-align:right;font-variant-numeric:tabular-nums}
+  .inp input:focus,.inp select:focus{border-color:var(--accent);background:var(--panel)}
+  .seg{display:inline-flex;border:2px solid var(--border);border-radius:10px;overflow:hidden}
+  .seg button{border:none;background:var(--panel-2);color:var(--text-2);padding:7px 14px;cursor:pointer;font-weight:600;font-size:13px}
+  .seg button.on{background:var(--accent);color:#fff}
+  .calc-result{background:linear-gradient(135deg,var(--accent-soft),var(--panel-2));border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+  .calc-result h3{font-size:15px;margin-bottom:12px;font-weight:800}
+  .res-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--border)}
+  .res-row:last-child{border-bottom:none}
+  .res-row .k{color:var(--text-2);font-size:13px}
+  .res-row .v{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text)}
+  .res-row.hl .v{color:var(--accent);font-size:22px}
+  .res-note{font-size:12px;color:var(--text-2);margin-top:10px;line-height:1.6}
+  .big-num{font-size:26px;font-weight:800;color:var(--accent)}
+
+  /* 个税逐月表 */
+  .iit-fill{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:flex-end}
+  .iit-fill .mini-inp{display:flex;flex-direction:column;gap:5px}
+  .iit-fill .mini-inp label{font-size:11px;color:var(--text-2);font-weight:600}
+  .iit-fill .mini-inp input{width:96px;padding:6px 8px;border:2px solid var(--border);border-radius:9px;background:var(--panel-2);color:var(--text);text-align:right;font-size:13px;outline:none}
+  .iit-fill .mini-inp input:focus{border-color:var(--accent);background:var(--panel)}
+  .iit-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+  .iit-table th,.iit-table td{padding:5px 6px;text-align:right;border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums}
+  .iit-table th{color:var(--text-2);font-weight:700;background:var(--panel-2)}
+  .iit-table td:first-child,.iit-table th:first-child{text-align:center;color:var(--text-2);width:34px}
+  .iit-table input{width:80px;padding:5px 6px;border:1.5px solid var(--border);border-radius:8px;background:var(--panel-2);color:var(--text);text-align:right;font-size:12px;outline:none}
+  .iit-table input:focus{border-color:var(--accent);background:var(--panel)}
+  .iit-table tbody tr:hover{background:var(--accent-soft)}
+  .iit-bonus{display:flex;align-items:center;gap:10px;margin:10px 0 6px;flex-wrap:wrap}
+  .iit-bonus label{font-weight:700}
+  .iit-bonus input{width:140px;padding:7px 9px;border:2px solid var(--border);border-radius:10px;background:var(--panel-2);color:var(--text);text-align:right;font-size:14px;outline:none}
+  .iit-bonus input:focus{border-color:var(--accent);background:var(--panel)}
+
+  /* ===== 财务信息 ===== */
+  .fin-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;color:var(--text-2);font-size:13px}
+  .src{font-size:11px;padding:2px 9px;border-radius:9px;font-weight:700}
+  .src.live{background:#DFF3E5;color:var(--green)}
+  .src.snap{background:#FCEBCF;color:var(--amber)}
+  .fin-list{display:flex;flex-direction:column;gap:10px}
+  .fin-item{display:flex;align-items:center;gap:12px;padding:13px 15px;background:var(--panel);
+    border:2px solid var(--border);border-radius:14px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:.15s}
+  .fin-item:hover{border-color:var(--accent);transform:translateX(3px)}
+  .fin-src{flex-shrink:0;font-size:11px;padding:3px 9px;border-radius:9px;font-weight:700;white-space:nowrap}
+  .fin-src.src-tax{background:#FFE3DA;color:var(--red)}
+  .fin-src.src-mof{background:#DCEBFF;color:#3a7afe}
+  .fin-date{flex-shrink:0;font-size:12px;color:var(--text-2);font-variant-numeric:tabular-nums;width:84px}
+  .fin-title{flex:1;font-size:14px;font-weight:600;word-break:break-word}
+  .fin-loading{text-align:center;color:var(--text-2);padding:50px;font-size:14px}
+  .fin-err{text-align:center;color:var(--red);padding:30px;font-size:13px}
+  /* 报税期限 */
+  .tax-meta{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;color:var(--text-2);font-size:13px}
+  .tax-list{display:flex;flex-direction:column;gap:11px}
+  .tax-item{border:2px solid var(--border);border-radius:15px;padding:13px 15px;background:var(--panel);display:flex;flex-direction:column;gap:5px;transition:.15s}
+  .tax-item:hover{border-color:var(--accent-soft)}
+  .tax-item.soon{border-color:#E8590C;box-shadow:0 0 0 3px rgba(232,89,12,.12);background:linear-gradient(135deg,rgba(232,89,12,.06),var(--panel))}
+  .tax-item.past{opacity:.5}
+  .tax-top{display:flex;align-items:baseline;gap:10px}
+  .tax-date{font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+  .tax-left{font-size:12px;color:var(--text-2)}
+  .tax-left.soon{color:#E8590C;font-weight:800}
+  .tax-tags{font-size:14px;color:var(--text);line-height:1.55}
+  .tax-org{font-size:11px;color:var(--text-2)}
+  .tax-actions{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 4px}
+  /* 报税期限：列表/日历切换 & 已完成清单 */
+  .due-tabs{display:flex;gap:6px;margin:4px 0 12px}
+  .due-tabs button{font-size:13px;padding:6px 14px;border-radius:11px;border:2px solid var(--border);background:var(--panel);color:var(--text-2);cursor:pointer;font-weight:700;transition:.15s}
+  .due-tabs button:hover{border-color:var(--accent-soft)}
+  .due-tabs button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .due-cal{background:var(--panel);border:2px solid var(--border);border-radius:16px;padding:14px;box-shadow:var(--shadow)}
+  .due-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .due-cal-title{font-weight:800;font-size:16px;color:var(--accent)}
+  .due-cal-nav{display:flex;gap:6px}
+  .due-cal-nav button{width:30px;height:30px;border-radius:9px;border:2px solid var(--border);background:var(--bg);cursor:pointer;font-size:15px;font-weight:800;color:var(--text-2)}
+  .due-cal-nav button:hover{border-color:var(--accent);color:var(--accent)}
+  .due-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+  .due-cal-dow{text-align:center;font-size:11px;color:var(--text-2);padding:4px 0;font-weight:700}
+  .due-cell{position:relative;min-height:60px;border:1.5px solid var(--border);border-radius:11px;padding:6px 6px 4px;cursor:pointer;transition:.12s;background:var(--bg);display:flex;flex-direction:column;gap:2px}
+  .due-cell:hover{border-color:var(--accent-soft)}
+  .due-cell.other{opacity:.38}
+  .due-cell.today{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+  .due-cell.has{background:linear-gradient(135deg,rgba(232,89,12,.10),var(--panel))}
+  .due-cell.soon{border-color:#E8590C;box-shadow:0 0 0 3px rgba(232,89,12,.13)}
+  .due-cell.sel{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .due-cell .dnum{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+  .due-cell .ddot{width:7px;height:7px;border-radius:50%;background:#E8590C;margin-top:1px}
+  .due-cell .dlbl{font-size:10px;color:var(--text-2);line-height:1.25;overflow:hidden;max-height:25px}
+  .due-cal-detail{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+  .due-done{margin-top:18px;background:var(--panel);border:2px solid var(--border);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow)}
+  .due-done-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .due-done-head h3{font-size:15px;margin:0;color:var(--text)}
+  .due-done-sub{font-size:11px;color:var(--text-2);margin:0 0 10px}
+  .due-prog{flex:1;height:9px;background:var(--border);border-radius:6px;overflow:hidden;min-width:60px}
+  .due-prog>i{display:block;height:100%;background:var(--green);transition:.3s;width:0}
+  .due-done-list{display:flex;flex-direction:column}
+  .due-done-item{display:flex;align-items:center;gap:11px;padding:9px 4px;border-bottom:1px solid var(--border)}
+  .due-done-item:last-child{border-bottom:0}
+  .due-done-item input{width:19px;height:19px;accent-color:#E8590C;cursor:pointer;flex-shrink:0}
+  .due-done-item label{flex:1;cursor:pointer;font-size:14px;color:var(--text)}
+  .due-done-item.done label{text-decoration:line-through;color:var(--text-2)}
+  .due-done-item .badge{font-size:11px;padding:2px 8px;border-radius:8px;background:#FCEBCF;color:var(--amber);font-weight:700;white-space:nowrap}
+  .due-done-item .badge.none{background:var(--border);color:var(--text-2)}
+  .due-done-add{display:flex;gap:6px;margin-top:12px}
+  .due-done-add input{flex:1}
+  .due-done-actions{display:flex;gap:8px;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="logo"><span class="dog">🐕</span> 柯基财税工作台</div>
+    <div class="clock" id="clock"></div>
+    <div class="search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="text" placeholder="搜索当前模块…  ( / 聚焦 )">
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeBtn" title="切换主题">🌙</button>
+      <button class="icon-btn" id="exportBtn" title="导出备份">⬇</button>
+      <button class="icon-btn" id="importBtn" title="导入备份">⬆</button>
+      <input type="file" id="importFile" accept="application/json" style="display:none">
+    </div>
+  </div>
+  <div class="body">
+    <div class="sidebar">
+      <div class="nav-item active" data-action="nav" data-module="todos"><span>🐾</span>待办<span class="badge" id="c-todos">0</span></div>
+      <div class="nav-item" data-action="nav" data-module="bookmarks"><span>🔗</span>网址<span class="badge" id="c-bookmarks">0</span></div>
+      <div class="nav-item" data-action="nav" data-module="notes"><span>📝</span>便签<span class="badge" id="c-notes">0</span></div>
+      <div class="nav-item" data-action="nav" data-module="calc"><span>🧮</span>财税计算器</div>
+      <div class="nav-item" data-action="nav" data-module="finance"><span>📰</span>财务信息</div>
+  <div class="nav-item" data-action="nav" data-module="taxdue"><span>📅</span>报税期限</div>
+      <div class="side-foot">🐕 柯基财税工作台 v2.0<br>本地存储 · 数据仅存于本机</div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<div class="mask" id="mask"><div class="modal" id="modal"></div></div>
+<div class="mask" id="lb"><img id="lbimg" alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const STORE_KEY = 'lobster_workbench_v1';
+let state = { todos:[], bookmarks:[], notes:[], settings:{ theme:'light' }, taxDone:{} };
+let taxDueData = null;        // 缓存报税期限数据（避免切 tab 重复拉取）
+let taxDueTab = 'list';       // 'list' | 'cal'
+let taxCalMonth = null;       // 日历当前月 Date
+let taxCalSel = null;         // 日历选中的日期 'YYYY-MM-DD'
+let activeModule = 'todos';
+let searchTerm = '';
+let todoFilter = 'all';
+let bmFilter = 'all';
+let calcTab = 'iit';
+
+// 财务信息内置快照（后端不可用时兜底，真实公告）
+const FIN_SNAPSHOT = { updated:'2026-08-03', live:false, items:[
+  { source:'国家税务总局', title:'国家税务总局关于在成品油零售领域全面推广“交易即开票”有关事项的公告', date:'2026-07', url:'https://www.chinatax.gov.cn/' },
+  { source:'国家税务总局', title:'国家税务总局关于发布出口退税率文库2026B版的通知', date:'2026-07', url:'https://www.chinatax.gov.cn/' },
+  { source:'国家税务总局', title:'国家税务总局关于个人所得税有关征管事项的公告', date:'2026-07', url:'https://www.chinatax.gov.cn/' },
+  { source:'国家税务总局', title:'国家税务总局关于修订部分税务执法文书的公告', date:'2026-07', url:'https://www.chinatax.gov.cn/' },
+  { source:'国家税务总局', title:'国家税务总局关于调整消费税纳税申报表有关事项的公告', date:'2026-07', url:'https://www.chinatax.gov.cn/' },
+  { source:'国家税务总局', title:'财政部 税务总局关于调整平潭综合实验区有关增值税和消费税退税货物范围的通知', date:'2026-06', url:'https://www.chinatax.gov.cn/' },
+  { source:'财政部', title:'财政部 税务总局关于离岸信托 个人所得税有关事项的公告', date:'2026-07-24', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'财政部等三部门印发《征收挥发性有机物环境保护税试点实施办法》', date:'2026-07-24', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告', date:'2026-07-03', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'《管理会计应用指引第804号——财务共享服务》印发', date:'2026-07-01', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'《企业会计准则解释第20号》印发', date:'2026-06-17', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'财政部、商务部修订印发《服务业发展资金管理办法》', date:'2026-06-10', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' },
+  { source:'财政部', title:'国务院关税税则委员会关于对非洲建交国实施零关税举措的公告', date:'2026-04-28', url:'https://www.mof.gov.cn/zhengwuxinxi/zhengcefabu/' }
+]};
+
+// 报税期限：内置规则兜底（无网络/无 taxdue.json 时使用，按当前月动态生成，不依赖外部数据）
+function genTaxBackup(){
+  const now=new Date();
+  const out=[]; const y=now.getFullYear();
+  for(let i=0;i<3;i++){
+    const d=new Date(y, now.getMonth()+i, 1);
+    const y2=d.getFullYear(), m=d.getMonth()+1;
+    const core='增值税、企业所得税、个人所得税、消费税、城市维护建设税、教育费附加、地方教育附加、印花税';
+    out.push({date:y2+'-'+String(m).padStart(2,'0')+'-15', title:core+(m%3===1?'、企业所得税（季度预缴）':''), org:'全国通用（规则兜底）'});
+    out.push({date:y2+'-'+String(m).padStart(2,'0')+'-25', title:'社会保险费（基本养老、基本医疗）', org:'全国通用（规则兜底）'});
+  }
+  return {updated:'规则兜底 · '+now.toISOString().slice(0,10), source:'内置规则（离线兜底，以官方为准）', items:out};
+}
+
+/* ===== 报税期限 ===== */
+function renderTaxDue(){
+  let html=`<div class="module-head"><h1>📅 报税期限</h1><span class="sub">国家税务总局 12366 办税日历 · 河南适用</span></div>`;
+  html+=`<div class="tax-actions">
+    <a class="btn" href="https://etax.henan.chinatax.gov.cn:8443/" target="_blank" rel="noopener">🔑 打开河南省电子税务局</a>
+    <a class="btn ghost" href="https://henan.chinatax.gov.cn/xxgk/tzgg/" target="_blank" rel="noopener">📢 河南税务通知公告</a>
+    <button class="btn ghost" data-action="taxduerefresh">↻ 刷新</button></div>`;
+  html+=`<div class="due-tabs">
+    <button class="${taxDueTab==='list'?'active':''}" data-action="duetab" data-tab="list">📋 列表</button>
+    <button class="${taxDueTab==='cal'?'active':''}" data-action="duetab" data-tab="cal">📅 日历</button></div>`;
+  html+=`<div id="tax-list" style="${taxDueTab==='cal'?'display:none':''}"><div class="fin-loading">🐕 正在拉取报税期限…</div></div>`;
+  html+=`<div id="tax-cal" style="${taxDueTab==='list'?'display:none':''}"></div>`;
+  html+=`<div id="tax-done"></div>`;
+  return html;
+}
+// 已完成申报清单：常用申报项。截止日按法定申报期规则计算（次月15日 / 社保25日），准确且不依赖合并数据
+const DONE_DEF = [
+  { key:'增值税及附加税费', d:15 },
+  { key:'企业所得税（月/季）申报', d:15 },
+  { key:'个人所得税（代扣代缴）', d:15 },
+  { key:'社会保险费申报', d:25 },
+  { key:'印花税申报', d:15 },
+  { key:'残疾人就业保障金（年）', d:0 },
+  { key:'文化事业建设费（如适用）', d:15 },
+  { key:'环境保护税（如适用）', d:15 }
+];
+function curMonthKey(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'); }
+// 根据法定申报期规则计算当月各项截止日（次月 d 日；d=0 表示按年申报）
+function doneDeadline(def){
+  if(def.d===0) return { label:'按年申报', cls:'none' };
+  const now=new Date(); const dt=new Date(now.getFullYear(), now.getMonth()+1, def.d);
+  const ds=dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');
+  return { label:'截止 '+ds.slice(5), cls:'' };
+}
+function ensureDoneBucket(){
+  const mk=curMonthKey();
+  if(!state.taxDone[mk]) state.taxDone[mk]={};
+  DONE_DEF.forEach(d=>{ if(!(d.key in state.taxDone[mk])) state.taxDone[mk][d.key]=false; });
+}
+function renderTaxDone(){
+  const wrap=document.getElementById('tax-done'); if(!wrap)return;
+  ensureDoneBucket();
+  const mk=curMonthKey(); const bucket=state.taxDone[mk];
+  const keys=Object.keys(bucket);
+  const done=keys.filter(k=>bucket[k]).length;
+  const pct=keys.length?Math.round(done/keys.length*100):0;
+  let html=`<div class="due-done">
+    <div class="due-done-head"><h3>✅ 本月已完成申报</h3>
+      <div class="due-prog"><i style="width:${pct}%"></i></div><b style="font-size:13px;color:var(--green)">${done}/${keys.length}</b></div>
+    <p class="due-done-sub">仅保存在本机浏览器（不随链接分享）。${mk} · 勾选后自动记录，跨月自动重置</p>
+    <div class="due-done-list">`;
+  keys.forEach((k,i)=>{
+    const checked=bucket[k]?'checked':''; const cls=bucket[k]?'done':'';
+    const def=DONE_DEF.find(x=>x.key===k);
+    const dl=def?doneDeadline(def):{label:'自定义项',cls:'none'};
+    const badge=`<span class="badge ${dl.cls}">${dl.label}</span>`;
+    html+=`<div class="due-done-item ${cls}">
+      <input type="checkbox" id="done-cb-${i}" data-action="donetoggle" data-key="${esc(k)}" ${checked}>
+      <label for="done-cb-${i}">${esc(k)}</label>${badge}</div>`;
+  });
+  html+=`</div>
+    <div class="due-done-add"><input type="text" id="done-add-in" placeholder="添加一项本月的申报/事项…" maxlength="30"><button class="btn" data-action="doneadd">＋ 添加</button></div>
+    <div class="due-done-actions"><button class="btn ghost" data-action="donereset">↺ 重置本月</button></div>
+  </div>`;
+  wrap.innerHTML=html;
+}
+function renderTaxDueCalendar(){
+  const wrap=document.getElementById('tax-cal'); if(!wrap)return;
+  if(!taxCalMonth) taxCalMonth=new Date();
+  const y=taxCalMonth.getFullYear(), m=taxCalMonth.getMonth();
+  const first=new Date(y,m,1); const startDow=(first.getDay()+6)%7; // 周一为一周开始
+  const days=new Date(y,m+1,0).getDate();
+  const cells=[];
+  for(let i=0;i<startDow;i++){ const d=new Date(y,m,1-i); cells.push({d,other:true}); }
+  for(let i=1;i<=days;i++){ cells.push({d:new Date(y,m,i),other:false}); }
+  while(cells.length%7!==0) cells.push({d:new Date(y,m,days+cells.length%7+1),other:true});
+  // 按日分组事项
+  const byDate={};
+  (taxDueData?taxDueData.items:[]).forEach(it=>{ if(it.date){ (byDate[it.date]=byDate[it.date]||[]).push(it); } });
+  const today=new Date(); today.setHours(0,0,0,0);
+  let html=`<div class="due-cal">
+    <div class="due-cal-head">
+      <div class="due-cal-title">${y} 年 ${m+1} 月</div>
+      <div class="due-cal-nav">
+        <button data-action="calprev">‹</button>
+        <button data-action="calnext">›</button>
+      </div></div>
+    <div class="due-cal-grid">
+      ${['一','二','三','四','五','六','日'].map(w=>`<div class="due-cal-dow">${w}</div>`).join('')}`;
+  cells.forEach(c=>{
+    const ds=c.d.getFullYear()+'-'+String(c.d.getMonth()+1).padStart(2,'0')+'-'+String(c.d.getDate()).padStart(2,'0');
+    const items=byDate[ds]||[];
+    const isToday=c.d.getTime()===today.getTime();
+    const diff=Math.round((c.d-today)/86400000);
+    const soon=items.length&&diff>=0&&diff<=7;
+    const cls=['due-cell',c.other?'other':'',items.length?'has':'',isToday?'today':'',soon?'soon':'',taxCalSel===ds?'sel':''].join(' ');
+    const lbl=items[0]?items[0].title.split('、')[0].slice(0,8):'';
+    html+=`<div class="${cls}" data-action="calday" data-date="${ds}">
+      <div class="dnum">${c.d.getDate()}</div>
+      ${items.length?`<div class="ddot"></div><div class="dlbl">${esc(lbl)}</div>`:''}</div>`;
+  });
+  html+=`</div>`;
+  // 选中日详情
+  if(taxCalSel && byDate[taxCalSel]){
+    html+=`<div class="due-cal-detail">`;
+    byDate[taxCalSel].forEach(it=>{
+      const due=new Date(it.date+'T00:00:00'); const diff=Math.round((due-today)/86400000);
+      const left=diff<0?'已过期':(diff<=7?'仅剩 '+diff+' 天':'还剩 '+diff+' 天');
+      html+=`<div class="tax-item ${diff<0?'past':diff<=7?'soon':''}">
+        <div class="tax-top"><span class="tax-date">${esc(it.date)}</span><span class="tax-left ${diff<=7&&diff>=0?'soon':''}">${left}</span></div>
+        <div class="tax-tags">${esc(it.title)}</div>
+        <div class="tax-org">来源：${esc(it.org||'全国通用')}</div></div>`;
+    });
+    html+=`</div>`;
+  } else if(taxCalSel){
+    html+=`<div class="due-cal-detail"><div class="tax-org" style="padding:8px 2px">📭 ${esc(taxCalSel)} 当日无申报事项</div></div>`;
+  }
+  html+=`</div>`;
+  wrap.innerHTML=html;
+}
+function renderTaxDueList(data){
+  const wrap=document.getElementById('tax-list'); if(!wrap)return;
+  const today=new Date(); today.setHours(0,0,0,0);
+  let html=`<div class="tax-meta">数据更新于 <b>${esc(data.updated||'—')}</b> <span class="src snap">${esc(data.source||'')}</span>
+    <span style="margin-left:auto;font-size:11px">⚠️ 仅供参考，以河南省税务局公告为准</span></div><div class="tax-list">`;
+  (data.items||[]).forEach(it=>{
+    const due=new Date(it.date+'T00:00:00');
+    const diff=Math.round((due-today)/86400000);
+    let cls='', left='';
+    if(diff<0){ cls='past'; left='已过期'; }
+    else if(diff<=7){ cls='soon'; left='仅剩 '+diff+' 天'; }
+    else { left='还剩 '+diff+' 天'; }
+    html+=`<div class="tax-item ${cls}">
+      <div class="tax-top"><span class="tax-date">${esc(it.date)}</span><span class="tax-left ${cls==='soon'?'soon':''}">${left}</span></div>
+      <div class="tax-tags">${esc(it.title)}</div>
+      <div class="tax-org">来源：${esc(it.org||'全国通用')}</div></div>`;
+  });
+  html+='</div>';
+  wrap.innerHTML=html;
+}
+async function loadTaxDue(){
+  // 优先读同源 taxdue.json（GitHub Pages 每日 08:00 自动刷新，真正拉取官方日历）
+  try{
+    const r=await fetch('./taxdue.json',{cache:'no-store'});
+    if(r.ok){ const d=await r.json(); if(d&&d.items&&d.items.length){ taxDueData=d; renderTaxDueList(d); renderTaxDueCalendar(); renderTaxDone(); return; } }
+  }catch(e){}
+  // 离线兜底：内置规则
+  taxDueData=genTaxBackup(); renderTaxDueList(taxDueData); renderTaxDueCalendar(); renderTaxDone();
+}
+
+// 河南税务常用官方网址（已核实真实地址）
+const SEED_HENAN = [
+  { name:'河南省电子税务局', url:'https://etax.henan.chinatax.gov.cn:8443/', cat:'河南税务' },
+  { name:'国家税务总局河南省税务局', url:'https://henan.chinatax.gov.cn', cat:'河南税务' },
+  { name:'国家税务总局政策法规库', url:'https://fgk.chinatax.gov.cn/', cat:'河南税务' },
+  { name:'自然人电子税务局(个税)', url:'https://etax.chinatax.gov.cn', cat:'河南税务' },
+  { name:'河南省社会保障网上服务平台', url:'https://siwsfw.hrss.henan.gov.cn/portal/', cat:'河南税务' },
+  { name:'河南省医疗保障公共服务平台', url:'https://ggfw.ylbz.henan.gov.cn', cat:'河南税务' },
+  { name:'河南省医疗保障局', url:'https://ylbz.henan.gov.cn', cat:'河南税务' },
+  { name:'河南省人力资源和社会保障厅', url:'https://hrss.henan.gov.cn', cat:'河南税务' }
+];
+
+function load(){ try{ const s=localStorage.getItem(STORE_KEY); if(s){ const p=JSON.parse(s); state={...state,...p}; } }catch(e){} }
+function ensureSeed(){
+  if(state.settings.seedHenan) return;
+  if(state.bookmarks.length===0){
+    state.bookmarks = SEED_HENAN.map(x=>({ id:uid(), name:x.name, url:x.url, cat:x.cat }));
+  }
+  state.settings.seedHenan = true; save();
+}
+function seedHenan(){
+  const have = new Set(state.bookmarks.map(b=>b.url));
+  let added=0;
+  SEED_HENAN.forEach(x=>{ if(!have.has(x.url)){ state.bookmarks.unshift({ id:uid(), name:x.name, url:x.url, cat:x.cat }); added++; } });
+  if(added){ save(); render(); toast('已添加 '+added+' 个河南税务网址'); } else toast('河南税务预设已存在');
+}
+function save(){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ toast('⚠️ 本地存储已满，请删除部分带图待办或清理数据'); } }
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2000); }
+function fmtMoney(n){ return (Math.round(n*100)/100).toLocaleString('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function colorFromString(str){ let h=0; for(let i=0;i<str.length;i++) h=str.charCodeAt(i)+((h<<5)-h); return 'hsl('+(Math.abs(h)%360)+',62%,52%)'; }
+function domainOf(url){ try{ return new URL(url).hostname.replace(/^www\./,''); }catch(e){ return url; } }
+
+/* ---- date helpers ---- */
+function parseDueDate(input){
+  let text=input; let due=null;
+  const today=new Date(); today.setHours(0,0,0,0);
+  const setOff=d=>{ const x=new Date(today); x.setDate(x.getDate()+d); return x; };
+  let m;
+  if((m=text.match(/今天|今日/))){ due=setOff(0); }
+  else if((m=text.match(/明天|明日/))){ due=setOff(1); }
+  else if((m=text.match(/后天/))){ due=setOff(2); }
+  else if((m=text.match(/大后天/))){ due=setOff(3); }
+  else if((m=text.match(/(?:周|星期|礼拜)([一二三四五六日天])/))){
+    const map={'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'日':0,'天':0};
+    const tgt=map[m[1]]; let cur=today.getDay(); let diff=(tgt-cur+7)%7; if(diff===0)diff=7;
+    due=setOff(diff);
+  }
+  else if((m=text.match(/(\d+)\s*天[后以]/))){ due=setOff(parseInt(m[1])); }
+  else if((m=text.match(/(\d{4})[-/](\d{1,2})[-/](\d{1,2})/))){
+    due=new Date(parseInt(m[1]),parseInt(m[2])-1,parseInt(m[3]));
+  }
+  else if((m=text.match(/(\d{1,2})[-/](\d{1,2})(?:[日号])?/))){
+    const mo=parseInt(m[1]),da=parseInt(m[2]);
+    if(mo>=1&&mo<=12&&da>=1&&da<=31){ let d=new Date(today.getFullYear(),mo-1,da); if(d<today)d.setFullYear(d.getFullYear()+1); due=d; }
+  }
+  if(due){
+    const iso=due.getFullYear()+'-'+String(due.getMonth()+1).padStart(2,'0')+'-'+String(due.getDate()).padStart(2,'0');
+    return { text: text.replace(m[0],'').replace(/\s{2,}/g,' ').trim(), due: iso };
+  }
+  return { text:text.trim(), due:null };
+}
+function fmtDue(iso){
+  if(!iso) return null;
+  const d=new Date(iso+'T00:00:00'); const t=new Date(); t.setHours(0,0,0,0);
+  const diff=Math.round((d-t)/86400000);
+  let label;
+  if(diff===0)label='今天'; else if(diff===1)label='明天'; else if(diff===2)label='后天';
+  else if(diff<0)label='逾期'+(-diff)+'天'; else if(diff<=6)label=(diff)+'天后';
+  else label=(d.getMonth()+1)+'-'+d.getDate();
+  let cls='due'; if(diff<0)cls+=' overdue'; else if(diff<=1)cls+=' soon';
+  return {label,cls};
+}
+
+/* ---- compress image (with quota safety) ---- */
+function compressImage(file,maxW=480,q=0.72){
+  return new Promise((res,rej)=>{
+    const r=new FileReader();
+    r.onload=e=>{ const img=new Image();
+      img.onload=()=>{ let w=img.width,h=img.height; if(w>maxW){h=Math.round(h*maxW/w);w=maxW;}
+        const c=document.createElement('canvas'); c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0,w,h); res(c.toDataURL('image/jpeg',q)); };
+      img.onerror=rej; img.src=e.target.result; };
+    r.onerror=rej; r.readAsDataURL(file);
+  });
+}
+function bindPaste(el,mode){
+  if(!el)return;
+  el.addEventListener('paste',e=>{
+    const items=e.clipboardData&&e.clipboardData.items; if(!items)return;
+    for(const it of items){ if(it.type.indexOf('image')===0){ e.preventDefault();
+      const file=it.getAsFile(); if(!file)return;
+      compressImage(file).then(d=>{
+        if(mode==='quick'){ createImageTodo(el.value, d); }
+        else { const pv=document.getElementById('f-prev'); if(pv){ pv.src=d; pv.style.display='block'; pv.dataset.val=d; } toast('已粘贴图片，保存后生效'); }
+      });
+      return;
+    }}
+  });
+}
+function createImageTodo(text, shot){
+  text=(text||'').trim();
+  state.todos.unshift({ id:uid(), text:text||'📷 图片待办', priority:document.getElementById('qpri').value,
+    due: document.getElementById('qdate').value||null, tags: text?extractTags(text):[], shot, done:false, created:Date.now() });
+  save(); const qa=document.getElementById('qa'); if(qa)qa.value=''; const qd=document.getElementById('qdate'); if(qd)qd.value=''; render(); toast('已添加（含图片）');
+}
+function showLightbox(src){ const lb=document.getElementById('lb'); document.getElementById('lbimg').src=src; lb.classList.add('show'); }
+
+/* ---- render ---- */
+function counts(){ document.getElementById('c-todos').textContent=state.todos.filter(t=>!t.done).length;
+  document.getElementById('c-bookmarks').textContent=state.bookmarks.length;
+  document.getElementById('c-notes').textContent=state.notes.length; }
+
+function renderTodos(){
+  const q=searchTerm.toLowerCase();
+  let list=state.todos.filter(t=>{
+    if(todoFilter==='active'&&t.done)return false;
+    if(todoFilter==='done'&&!t.done)return false;
+    if(todoFilter==='today'){ const f=fmtDue(t.due); if(!(t.due&&f&&['今天','明天','后天'].includes(f.label)&&!f.cls.includes('overdue')))return false; }
+    if(q&&!(t.text.toLowerCase().includes(q)||(t.tags||[]).join(' ').toLowerCase().includes(q)))return false;
+    return true;
+  });
+  const pr={high:0,mid:1,low:2};
+  list.sort((a,b)=>{ if(a.done!==b.done)return a.done?1:-1;
+    if((pr[a.priority]||1)!==(pr[b.priority]||1))return (pr[a.priority]||1)-(pr[b.priority]||1);
+    if(a.due&&b.due)return a.due<b.due?-1:1; if(a.due)return -1; if(b.due)return 1; return 0; });
+  let html='';
+  html+=`<div class="module-head"><h1>🐾 待办</h1><span class="sub">共 ${state.todos.length} 项，未完成 ${state.todos.filter(t=>!t.done).length} 项</span>
+    <button class="btn spacer" data-action="add" data-type="todo">+ 新建待办</button></div>`;
+  html+=`<div class="quick">
+    <input type="text" id="qa" placeholder="快速添加，试试「周五前交报表」或「3天后还信用卡」，回车保存（可直接 Ctrl+V 粘贴截图）">
+    <select id="qpri"><option value="mid">中优先级</option><option value="high">高</option><option value="low">低</option></select>
+    <input type="date" id="qdate" title="手动设置截止日">
+    <button class="btn" id="qaBtn">添加</button></div>
+    <div class="hint" style="margin:-6px 0 14px">💡 在输入框按 Ctrl+V 可直接粘贴截图，自动存为带图待办</div>`;
+  html+=`<div class="filters">
+    <span class="chip ${todoFilter==='all'?'active':''}" data-action="filter" data-f="all">全部</span>
+    <span class="chip ${todoFilter==='active'?'active':''}" data-action="filter" data-f="active">进行中</span>
+    <span class="chip ${todoFilter==='done'?'active':''}" data-action="filter" data-f="done">已完成</span>
+    <span class="chip ${todoFilter==='today'?'active':''}" data-action="filter" data-f="today">近三天</span></div>`;
+  if(!list.length){ html+=`<div class="empty"><div class="big">🦴</div>暂无待办，顶部输入框回车即可添加</div>`; }
+  else{
+    html+='<div class="todo-list">';
+    list.forEach(t=>{
+      const f=fmtDue(t.due);
+      html+=`<div class="todo ${t.done?'done':''}" draggable="true" data-id="${t.id}">
+        <span class="grip">⠿</span>
+        <div class="cb" data-action="toggle-todo" data-id="${t.id}"></div>
+        <div class="t-main"><div class="t-text">${esc(t.text)}</div><div class="t-meta">
+          <span class="pri ${t.priority}">${t.priority==='high'?'高':t.priority==='low'?'低':'中'}</span>
+          ${f?`<span class="${f.cls}">${f.label}</span>`:''}
+          ${(t.tags||[]).map(tg=>`<span class="tag">#${esc(tg)}</span>`).join('')}
+        </div>${t.shot?`<img class="t-shot" src="${t.shot}" alt="截图" title="点击放大">`:''}</div>
+        <div class="row-actions">
+          <button class="mini" data-action="edit" data-type="todo" data-id="${t.id}" title="编辑">✎</button>
+          <button class="mini danger" data-action="delete" data-type="todo" data-id="${t.id}" title="删除">🗑</button>
+        </div></div>`;
+    });
+    html+='</div>';
+  }
+  return html;
+}
+function renderBookmarks(){
+  const q=searchTerm.toLowerCase();
+  const cats=[...new Set(state.bookmarks.map(b=>b.cat||'未分类'))];
+  let list=state.bookmarks.filter(b=>{
+    if(bmFilter!=='all'&&(b.cat||'未分类')!==bmFilter)return false;
+    if(q&&!(b.name.toLowerCase().includes(q)||b.url.toLowerCase().includes(q)||(b.cat||'').toLowerCase().includes(q)))return false;
+    return true;
+  });
+  let html='';
+  html+=`<div class="module-head"><h1>🔗 网址收藏</h1><span class="sub">${state.bookmarks.length} 个站点</span>
+    <button class="btn ghost" data-action="seed-henan">＋ 河南税务预设</button>
+    <button class="btn spacer" data-action="add" data-type="bookmark">+ 添加网址</button></div>`;
+  if(cats.length){ html+='<div class="filters">';
+    html+=`<span class="chip ${bmFilter==='all'?'active':''}" data-action="bmfilter" data-f="all">全部</span>`;
+    cats.forEach(c=>html+=`<span class="chip ${bmFilter===c?'active':''}" data-action="bmfilter" data-f="${esc(c)}">${esc(c)}</span>`);
+    html+='</div>';
+  }
+  if(!list.length){ html+=`<div class="empty"><div class="big">🔗</div>还没有网址，点右上角「添加网址」并上传截图</div>`; }
+  else{
+    html+='<div class="bm-grid">';
+    list.forEach(b=>{
+      const dom=domainOf(b.url); const col=colorFromString(dom);
+      const shot=b.shot?`<img class="bm-shot" src="${b.shot}" alt="">`:`<div class="bm-shot ph" style="background:${col}">${esc(dom[0].toUpperCase())}</div>`;
+      html+=`<a class="bm-card" href="${esc(b.url)}" target="_blank" rel="noopener" data-id="${b.id}">
+        ${shot}
+        <div class="bm-body"><div class="bm-title"><span class="bm-fav" style="background:${col}">${esc(dom[0].toUpperCase())}</span>${esc(b.name)}</div>
+        <div class="bm-domain">${esc(dom)}</div>
+        ${b.cat?`<span class="bm-cat">${esc(b.cat)}</span>`:''}</div>
+        <div class="row-actions">
+          <button class="mini" data-action="edit" data-type="bookmark" data-id="${b.id}" title="编辑">✎</button>
+          <button class="mini danger" data-action="delete" data-type="bookmark" data-id="${b.id}" title="删除">🗑</button>
+        </div></a>`;
+    });
+    html+='</div>';
+  }
+  return html;
+}
+function renderNotes(){
+  const q=searchTerm.toLowerCase();
+  let list=state.notes.filter(n=>{ if(q&&!(n.title.toLowerCase().includes(q)||n.body.toLowerCase().includes(q)))return false; return true; });
+  list.sort((a,b)=>b.created-a.created);
+  let html='';
+  html+=`<div class="module-head"><h1>📝 便签</h1><span class="sub">${state.notes.length} 张</span>
+    <button class="btn spacer" data-action="add" data-type="note">+ 新建便签</button></div>`;
+  if(!list.length){ html+=`<div class="empty"><div class="big">📝</div>还没有便签，记录个灵感吧</div>`; }
+  else{
+    html+='<div class="note-grid">';
+    list.forEach(n=>{
+      const d=new Date(n.created); const ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+      html+=`<div class="note" data-id="${n.id}">
+        <h3>${esc(n.title||'无标题')}</h3><p>${esc(n.body)}</p>
+        <div class="ndate">${ds}</div>
+        <div class="row-actions">
+          <button class="mini" data-action="edit" data-type="note" data-id="${n.id}" title="编辑">✎</button>
+          <button class="mini danger" data-action="delete" data-type="note" data-id="${n.id}" title="删除">🗑</button>
+        </div></div>`;
+    });
+    html+='</div>';
+  }
+  return html;
+}
+
+/* ===== 财税计算器 ===== */
+function renderCalc(){
+  const tabs=[['iit','🧾 个税+社保'],['vat','🧮 增值税+附加'],['cit','🏢 企业所得税'],['misc','📐 印花税+其他']];
+  let html=`<div class="module-head"><h1>🧮 财税计算器</h1><span class="sub">按 2026 年现行政策计算 · 输入即算</span></div>`;
+  html+='<div class="calc-tabs">';
+  tabs.forEach(([k,l])=>html+=`<div class="calc-tab ${calcTab===k?'active':''}" data-action="calctab" data-tab="${k}">${l}</div>`);
+  html+='</div><div class="calc-wrap">';
+  if(calcTab==='iit'){
+    let rows='';
+    for(let i=0;i<12;i++){ rows+=`<tr><td>${i+1}</td><td><input type="number" class="calc-in iit-w" data-m="${i}" value="0"></td><td><input type="number" class="calc-in iit-ins" data-m="${i}" value="0"></td><td><input type="number" class="calc-in iit-sp" data-m="${i}" value="0"></td></tr>`; }
+    html+=`<div class="calc-card"><h3>🧾 工资薪金 · 累计预扣法（逐月）</h3>
+      <div class="iit-fill">
+        <div class="mini-inp"><label>快速填充·工资</label><input type="number" id="fill-w" placeholder="如 10000"><button class="btn ghost" id="fillWbtn" style="padding:5px 10px;font-size:12px">套用12月</button></div>
+        <div class="mini-inp"><label>快速填充·三险一金</label><input type="number" id="fill-ins" placeholder="如 2000"><button class="btn ghost" id="fillInsbtn" style="padding:5px 10px;font-size:12px">套用</button></div>
+        <div class="mini-inp"><label>快速填充·专项附加</label><input type="number" id="fill-sp" placeholder="如 2000"><button class="btn ghost" id="fillSpbtn" style="padding:5px 10px;font-size:12px">套用</button></div>
+      </div>
+      <table class="iit-table"><thead><tr><th>月</th><th>工资</th><th>三险一金</th><th>专项附加</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="iit-bonus">
+        <label>年终奖</label>
+        <input type="number" class="calc-in" id="iit-bonus" value="0" placeholder="全年一次性奖金">
+        <div class="seg" id="iit-bonusmode"><button data-v="sep" class="on">单独计税</button><button data-v="merge">并入综合</button></div>
+      </div>
+      <div class="res-note">免征额 5000/月；累计预扣税率：≤3.6万 3%、≤14.4万 10%(速扣2520)、≤30万 20%(16920)、≤42万 25%、≤66万 30%、≤96万 35%、以上 45%。年终奖单独计税优惠至 2027 年底。</div></div>`;
+  } else if(calcTab==='vat'){
+    html+=`<div class="calc-card"><h3>🧮 增值税</h3>
+      <div class="inp"><label>纳税人类型</label><div class="seg" id="vat-type">
+        <button data-v="general" class="on">一般</button><button data-v="small">小规模</button></div></div>
+      <div class="inp"><label>城市类型(附加)</label><div class="seg" id="vat-city">
+        <button data-v="0.07" class="on">市区7%</button><button data-v="0.05">县城5%</button><button data-v="0.01">其他1%</button></div></div>
+      <div class="inp" id="vat-g"><label>销项税额</label><input type="number" class="calc-in" id="vat-out" value="0"></div>
+      <div class="inp" id="vat-g2"><label>进项税额</label><input type="number" class="calc-in" id="vat-in" value="0"></div>
+      <div class="inp" id="vat-s"><label>销售额(不含税)</label><input type="number" class="calc-in" id="vat-sales" value="0"></div>
+      <div class="inp" id="vat-s2"><label>征收率(%)</label><input type="number" class="calc-in" id="vat-rate" value="1" step="0.1"></div>
+      <div class="res-note">小规模月销售额≤10万免征增值税（此处仅算，需自行判断）。附加基数为实际缴纳增值税。</div></div>`;
+  } else if(calcTab==='cit'){
+    html+=`<div class="calc-card"><h3>🏢 企业所得税</h3>
+      <div class="inp"><label>应纳税所得额</label><input type="number" class="calc-in" id="cit-income" value="0"></div>
+      <div class="inp"><label>纳税人类型</label><div class="seg" id="cit-type">
+        <button data-v="small" class="on">小型微利</button><button data-v="normal">一般</button></div></div>
+      <div class="res-note">小型微利（所得额≤300万）：减按25%×20%=实际税负5%。一般企业税率25%。</div></div>`;
+  } else {
+    html+=`<div class="calc-card"><h3>📐 印花税 + 工会经费 + 残保金</h3>
+      <div class="inp"><label>印花税-合同金额</label><input type="number" class="calc-in" id="misc-st-amt" value="0"></div>
+      <div class="inp"><label>印花税-税目</label><select class="calc-in" id="misc-st-rate">
+        <option value="0.0003">购销合同 0.03%</option>
+        <option value="0.0005">加工承揽 0.05%</option>
+        <option value="0.0005">股权转让 0.05%</option>
+        <option value="0.00005">借款合同 0.005%</option>
+        <option value="0.001">财产租赁/保管 0.1%</option>
+        <option value="0.0003">建安勘察 0.03%</option></select></div>
+      <div class="inp"><label>工会经费-工资总额</label><input type="number" class="calc-in" id="misc-union" value="0"></div>
+      <div class="inp"><label>残保金-职工人数</label><input type="number" class="calc-in" id="misc-dis-num" value="0"></div>
+      <div class="inp"><label>残保金-年平均工资</label><input type="number" class="calc-in" id="misc-dis-wage" value="0"></div>
+      <div class="inp"><label>残保金-已安排残疾人数</label><input type="number" class="calc-in" id="misc-dis-arr" value="0"></div>
+      <div class="res-note">工会经费=工资总额×2%；残保金=(职工数×1.5%−已安排)×年平均工资，≤0 计为0。</div></div>`;
+  }
+  html+=`<div class="calc-result" id="calc-result"><h3>📊 计算结果</h3><div class="fin-loading">输入数字后自动计算…</div></div>`;
+  html+='</div>';
+  return html;
+}
+function calcCompute(){
+  const box=document.getElementById('calc-result'); if(!box)return;
+  let rows=[];
+  if(calcTab==='iit'){
+    const W=[],INS=[],SP=[];
+    for(let i=0;i<12;i++){
+      W.push(+(document.querySelector('.iit-w[data-m="'+i+'"]').value)||0);
+      INS.push(+(document.querySelector('.iit-ins[data-m="'+i+'"]').value)||0);
+      SP.push(+(document.querySelector('.iit-sp[data-m="'+i+'"]').value)||0);
+    }
+    const br=[[36000,0.03,0],[144000,0.1,2520],[300000,0.2,16920],[420000,0.25,31920],[660000,0.3,52920],[960000,0.35,85920],[Infinity,0.45,181920]];
+    const bracket=t=>{ let rate=0.03,q=0; for(const b of br){ if(t<=b[0]){rate=b[1];q=b[2];break;} } return {tax:Math.max(0,t*rate-q),rate,q}; };
+    const bonus=+(document.getElementById('iit-bonus').value)||0;
+    const mode=document.querySelector('#iit-bonusmode .on').dataset.v;
+    let cumInc=0,cumIns=0,cumSp=0,prevCum=0,finalTaxable=0; const det=[];
+    for(let i=0;i<12;i++){
+      cumInc+=W[i]; cumIns+=INS[i]; cumSp+=SP[i];
+      const deduct=5000*(i+1)+cumIns+cumSp;
+      const taxable=Math.max(0,cumInc-deduct); finalTaxable=taxable;
+      const t=bracket(taxable);
+      const monthTax=Math.max(0,t.tax-prevCum); prevCum=t.tax;
+      const take=W[i]-INS[i]-monthTax;
+      det.push({m:i+1,w:W[i],mt:monthTax,cum:prevCum,take});
+    }
+    let bonusTax=0;
+    if(bonus>0){
+      if(mode==='sep'){ const bm=bonus/12; const bb=bracket(bm); bonusTax=Math.max(0,bonus*bb.rate-bb.q); }
+      else { const fb=bracket(finalTaxable+bonus); bonusTax=Math.max(0,fb.tax-prevCum); }
+    }
+    const totalWage=cumInc, totalIns=cumIns, totalSp=cumSp;
+    const totalIIT=prevCum+bonusTax;
+    const totalTake=totalWage+bonus-totalIns-totalIIT;
+    let html='<h3>📊 计算结果</h3><table class="iit-table" style="margin-bottom:12px"><thead><tr><th>月</th><th>工资</th><th>本月个税</th><th>累计个税</th><th>本月到手</th></tr></thead><tbody>';
+    det.forEach(d=>{ html+=`<tr><td>${d.m}</td><td>${fmtMoney(d.w)}</td><td>${fmtMoney(d.mt)}</td><td>${fmtMoney(d.cum)}</td><td>${fmtMoney(d.take)}</td></tr>`; });
+    html+='</tbody></table>';
+    if(bonus>0) html+=`<div class="res-row"><span class="k">年终奖 ${mode==='sep'?'（单独计税）':'（并入综合）'}</span><span class="v">¥${fmtMoney(bonus)} · 税 ¥${fmtMoney(bonusTax)}</span></div>`;
+    html+=`<div class="res-row"><span class="k">全年工资合计</span><span class="v">¥${fmtMoney(totalWage)}</span></div>`;
+    html+=`<div class="res-row"><span class="k">全年三险一金</span><span class="v">¥${fmtMoney(totalIns)}</span></div>`;
+    html+=`<div class="res-row"><span class="k">全年专项附加</span><span class="v">¥${fmtMoney(totalSp)}</span></div>`;
+    html+=`<div class="res-row hl"><span class="k">全年个税合计</span><span class="v">¥${fmtMoney(totalIIT)}</span></div>`;
+    html+=`<div class="res-row hl"><span class="k">全年到手合计</span><span class="v">¥${fmtMoney(totalTake)}</span></div>`;
+    box.innerHTML=html; return;
+  } else if(calcTab==='vat'){
+    const type=document.querySelector('#vat-type .on').dataset.v;
+    const city=+document.querySelector('#vat-city .on').dataset.v;
+    let vat=0;
+    if(type==='general'){ const out=+document.getElementById('vat-out').value||0; const inn=+document.getElementById('vat-in').value||0; vat=Math.max(0,out-inn); }
+    else { const sales=+document.getElementById('vat-sales').value||0; const rate=(+document.getElementById('vat-rate').value||1)/100; vat=sales*rate; }
+    const cityTax=vat*city, edu=vat*0.03, local=vat*0.02, addTotal=cityTax+edu+local;
+    rows=[['应缴增值税',fmtMoney(vat),true],['城建税('+(city*100)+'%)',fmtMoney(cityTax)],['教育费附加(3%)',fmtMoney(edu)],['地方教育附加(2%)',fmtMoney(local)],['附加税费合计',fmtMoney(addTotal),true]];
+  } else if(calcTab==='cit'){
+    const inc=+document.getElementById('cit-income').value||0;
+    const type=document.querySelector('#cit-type .on').dataset.v;
+    let tax,rate;
+    if(type==='small'&&inc<=3000000){ tax=inc*0.05; rate='5.00%'; }
+    else { tax=inc*0.25; rate='25.00%'; }
+    rows=[['应纳税所得额',fmtMoney(inc)],['应纳所得税额',fmtMoney(tax),true],['实际税负',rate]];
+  } else {
+    const amt=+document.getElementById('misc-st-amt').value||0;
+    const str=+document.getElementById('misc-st-rate').value||0;
+    const st=amt*str;
+    const union=(+document.getElementById('misc-union').value||0)*0.02;
+    const num=+document.getElementById('misc-dis-num').value||0;
+    const wage=+document.getElementById('misc-dis-wage').value||0;
+    const arr=+document.getElementById('misc-dis-arr').value||0;
+    const dis=Math.max(0,(num*0.015-arr))*wage;
+    rows=[['印花税',fmtMoney(st),true],['工会经费(2%)',fmtMoney(union)],['残保金',fmtMoney(dis),true]];
+  }
+  box.innerHTML='<h3>📊 计算结果</h3>'+rows.map(r=>`<div class="res-row ${r[2]?'hl':''}"><span class="k">${r[0]}</span><span class="v">¥${r[1]}</span></div>`).join('');
+}
+function fillMonths(cls,srcId){
+  const v=document.getElementById(srcId).value;
+  document.querySelectorAll('.'+cls).forEach(inp=>inp.value=v);
+  calcCompute();
+}
+
+/* ===== 财务信息 ===== */
+function renderFinance(){
+  let html=`<div class="module-head"><h1>📰 财务信息</h1><span class="sub">多部委财税快报 · 每日 08:00 自动更新</span></div>`;
+  html+=`<div id="fin-list"><div class="fin-loading">🐕 正在拉取最新公告…</div></div>`;
+  return html;
+}
+function renderFinanceList(data, mode){
+  const wrap=document.getElementById('fin-list'); if(!wrap)return;
+  let tag, note='';
+  if(mode==='daily'){ tag='<span class="src live">每日快报</span>'; }
+  else if(mode==='live'){ tag='<span class="src live">实时</span>'; }
+  else { tag='<span class="src snap">快照</span>'; note='（暂显示内置快照）'; }
+  let html=`<div class="fin-meta">数据更新于 <b>${esc(data.updated||'—')}</b> ${tag} ${note}
+    <button class="btn ghost spacer" data-action="finrefresh">↻ 刷新</button></div><div class="fin-list">`;
+  (data.items||[]).forEach(it=>{
+    const cls=it.source==='国家税务总局'?'src-tax':'src-mof';
+    html+=`<a class="fin-item" href="${esc(it.url)}" target="_blank" rel="noopener">
+      <span class="fin-src ${cls}">${esc(it.source)}</span>
+      <span class="fin-date">${esc(it.date||'—')}</span>
+      <span class="fin-title">${esc(it.title)}</span></a>`;
+  });
+  html+='</div>';
+  wrap.innerHTML=html;
+}
+async function loadFinance(){
+  // 1) 优先读同源 news.json（GitHub Pages 每日 08:00 自动刷新）
+  try{
+    const r=await fetch('./news.json',{cache:'no-store'});
+    if(r.ok){ const d=await r.json(); if(d&&d.items&&d.items.length){ renderFinanceList(d,'daily'); return; } }
+  }catch(e){}
+  // 2) 本地后端实时（node server.js 模式）
+  try{
+    const ctrl=new AbortController(); const to=setTimeout(()=>ctrl.abort(),6000);
+    const r2=await fetch('/api/finance-news',{signal:ctrl.signal}); clearTimeout(to);
+    if(r2.ok){ const d=await r2.json(); renderFinanceList(d,'live'); return; }
+  }catch(e){}
+  // 3) 内置快照兜底
+  renderFinanceList(FIN_SNAPSHOT,'snap');
+}
+
+function render(){
+  counts();
+  const c=document.getElementById('content');
+  if(activeModule==='todos')c.innerHTML=renderTodos();
+  else if(activeModule==='bookmarks')c.innerHTML=renderBookmarks();
+  else if(activeModule==='notes')c.innerHTML=renderNotes();
+  else if(activeModule==='calc')c.innerHTML=renderCalc();
+  else if(activeModule==='finance')c.innerHTML=renderFinance();
+  else if(activeModule==='taxdue')c.innerHTML=renderTaxDue();
+  if(activeModule==='todos'){
+    const qa=document.getElementById('qa');
+    if(qa){ qa.focus();
+      qa.addEventListener('keydown',e=>{ if(e.key==='Enter')addQuick(); });
+      document.getElementById('qaBtn').addEventListener('click',addQuick);
+      bindPaste(qa,'quick');
+    }
+  }
+  if(activeModule==='calc'){ calcCompute();
+    document.querySelectorAll('.calc-in').forEach(el=>el.addEventListener('input',calcCompute));
+    const fw=document.getElementById('fillWbtn'); if(fw)fw.addEventListener('click',()=>fillMonths('iit-w','fill-w'));
+    const fi=document.getElementById('fillInsbtn'); if(fi)fi.addEventListener('click',()=>fillMonths('iit-ins','fill-ins'));
+    const fs=document.getElementById('fillSpbtn'); if(fs)fs.addEventListener('click',()=>fillMonths('iit-sp','fill-sp'));
+    document.querySelectorAll('#iit-bonusmode button').forEach(b=>b.addEventListener('click',()=>{ b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); calcCompute(); }));
+    document.querySelectorAll('#vat-type button,#vat-city button,#cit-type button').forEach(b=>b.addEventListener('click',()=>{
+      b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('on')); b.classList.add('on');
+      if(b.id==='vat-type'){ // toggle general/small inputs
+        const g=document.getElementById('vat-g'),g2=document.getElementById('vat-g2'),s=document.getElementById('vat-s'),s2=document.getElementById('vat-s2');
+        const small=b.dataset.v==='small';
+        g.style.display=g2.style.display=small?'none':'flex';
+        s.style.display=s2.style.display=small?'flex':'none';
+      }
+      calcCompute();
+    }));
+  }
+  if(activeModule==='finance'){ loadFinance(); }
+  if(activeModule==='taxdue'){ loadTaxDue(); }
+}
+
+function addQuick(){
+  const qa=document.getElementById('qa'); const val=qa.value.trim(); if(!val)return;
+  const p=parseDueDate(val);
+  const manual=document.getElementById('qdate').value;
+  state.todos.unshift({ id:uid(), text:p.text, priority:document.getElementById('qpri').value,
+    due: manual||p.due, tags: extractTags(p.text), done:false, created:Date.now() });
+  save(); qa.value=''; document.getElementById('qdate').value=''; render();
+  toast('已添加');
+}
+function extractTags(text){ const m=text.match(/#([^\s#]+)/g); return m?m.map(x=>x.slice(1)):[]; }
+
+/* ---- modal ---- */
+function openModal(type,id){
+  const m=document.getElementById('modal'); const item = id? (type==='todo'?state.todos.find(x=>x.id===id):type==='bookmark'?state.bookmarks.find(x=>x.id===id):state.notes.find(x=>x.id===id)) : null;
+  let html='';
+  if(type==='todo'){
+    html+=`<h2>${id?'编辑待办':'新建待办'}</h2>
+      <div class="field"><label>内容</label><input type="text" id="f-text" value="${esc(item?item.text:'')}" placeholder="要做什么"></div>
+      <div class="field"><label>优先级</label><select id="f-pri">
+        <option value="high" ${item&&item.priority==='high'?'selected':''}>高</option>
+        <option value="mid" ${(!item||item.priority==='mid')?'selected':''}>中</option>
+        <option value="low" ${item&&item.priority==='low'?'selected':''}>低</option></select></div>
+      <div class="field"><label>截止日</label><input type="date" id="f-due" value="${item&&item.due?item.due:''}"></div>
+      <div class="field"><label>标签（用 # 分隔，如 工作#紧急）</label><input type="text" id="f-tags" value="${esc(item&&item.tags?item.tags.join(' '):'')}"></div>
+      <div class="field"><label>截图（可粘贴或选择图片）</label><input type="file" id="f-shot" accept="image/*">
+        <div class="hint">在内容框按 Ctrl+V 也能直接贴图</div>
+        ${item&&item.shot?`<img class="shot-prev" id="f-prev" style="display:block" src="${item.shot}">`:`<img class="shot-prev" id="f-prev">`}</div>`;
+  } else if(type==='bookmark'){
+    html+=`<h2>${id?'编辑网址':'添加网址'}</h2>
+      <div class="field"><label>名称</label><input type="text" id="f-name" value="${esc(item?item.name:'')}" placeholder="如 龙虾邮箱"></div>
+      <div class="field"><label>网址</label><input type="text" id="f-url" value="${esc(item?item.url:'')}" placeholder="https://..."></div>
+      <div class="field"><label>分类</label><input type="text" id="f-cat" value="${esc(item?item.cat:'')}" placeholder="如 工作 / 工具"></div>
+      <div class="field"><label>截图</label><input type="file" id="f-shot" accept="image/*">
+        <div class="hint">支持手动上传截图，会自动压缩存储</div>
+        ${item&&item.shot?`<img class="shot-prev" id="f-prev" style="display:block" src="${item.shot}">`:`<img class="shot-prev" id="f-prev">`}</div>`;
+  } else {
+    html+=`<h2>${id?'编辑便签':'新建便签'}</h2>
+      <div class="field"><label>标题</label><input type="text" id="f-title" value="${esc(item?item.title:'')}" placeholder="标题（可空）"></div>
+      <div class="field"><label>内容</label><textarea id="f-body" placeholder="写点什么…">${esc(item?item.body:'')}</textarea></div>`;
+  }
+  html+=`<div class="modal-actions"><button class="btn ghost" id="m-cancel">取消</button><button class="btn" id="m-save">保存</button></div>`;
+  m.innerHTML=html; document.getElementById('mask').classList.add('show');
+  document.getElementById('m-cancel').onclick=closeModal;
+  document.getElementById('m-save').onclick=()=>saveModal(type,id,item);
+  if(type==='bookmark'){ const fi=document.getElementById('f-shot');
+    fi.onchange=async()=>{ if(fi.files[0]){ const d=await compressImage(fi.files[0]); const pv=document.getElementById('f-prev'); pv.src=d; pv.style.display='block'; pv.dataset.val=d; } };
+  }
+  if(type==='todo'){ bindPaste(document.getElementById('f-text'),'edit'); const fi=document.getElementById('f-shot');
+    if(fi)fi.onchange=async()=>{ if(fi.files[0]){ const d=await compressImage(fi.files[0]); const pv=document.getElementById('f-prev'); pv.src=d; pv.style.display='block'; pv.dataset.val=d; } };
+  }
+  const first=m.querySelector('input'); if(first)first.focus();
+}
+function closeModal(){ document.getElementById('mask').classList.remove('show'); }
+function saveModal(type,id,item){
+  if(type==='todo'){
+    const text=document.getElementById('f-text').value.trim();
+    const pv=document.getElementById('f-prev'); const shot=pv&&pv.dataset.val?pv.dataset.val:(item?item.shot:null);
+    if(!text&&!shot){toast('内容和图片不能同时为空');return;}
+    const tags=document.getElementById('f-tags').value.trim().split(/\s+/).filter(Boolean);
+    const data={ text:text||'📷 图片待办', priority:document.getElementById('f-pri').value, due:document.getElementById('f-due').value||null, tags, shot };
+    if(item){ Object.assign(item,data); } else { state.todos.unshift({id:uid(),...data,done:false,created:Date.now()}); }
+  } else if(type==='bookmark'){
+    const name=document.getElementById('f-name').value.trim()||domainOf(document.getElementById('f-url').value);
+    const url=document.getElementById('f-url').value.trim(); if(!url){toast('网址不能为空');return;}
+    const cat=document.getElementById('f-cat').value.trim()||'未分类';
+    const pv=document.getElementById('f-prev'); const shot=pv&&pv.dataset.val?pv.dataset.val:(item?item.shot:null);
+    const data={ name, url, cat, shot };
+    if(item){ Object.assign(item,data); } else { state.bookmarks.unshift({id:uid(),...data}); }
+  } else {
+    const title=document.getElementById('f-title').value.trim();
+    const body=document.getElementById('f-body').value;
+    if(item){ item.title=title; item.body=body; } else { state.notes.unshift({id:uid(),title,body,created:Date.now()}); }
+  }
+  save(); closeModal(); render(); toast('已保存');
+}
+
+/* ---- events ---- */
+document.addEventListener('click',e=>{
+  if(e.target.classList&&e.target.classList.contains('t-shot')){ showLightbox(e.target.src); return; }
+  const el=e.target.closest('[data-action]'); if(!el)return;
+  const a=el.dataset.action;
+  if(a==='edit'||a==='delete')e.preventDefault();
+  if(a==='nav'){ activeModule=el.dataset.module; searchTerm=''; document.getElementById('search').value='';
+    document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active',n.dataset.module===activeModule)); render(); }
+  else if(a==='filter'){ todoFilter=el.dataset.f; render(); }
+  else if(a==='bmfilter'){ bmFilter=el.dataset.f; render(); }
+  else if(a==='calctab'){ calcTab=el.dataset.tab; render(); }
+  else if(a==='finrefresh'){ loadFinance(); toast('已刷新'); }
+  else if(a==='taxduerefresh'){ loadTaxDue(); toast('已刷新'); }
+  else if(a==='seed-henan'){ seedHenan(); }
+  else if(a==='duetab'){ taxDueTab=el.dataset.tab;
+    const tl=document.getElementById('tax-list'),tc=document.getElementById('tax-cal');
+    if(tl)tl.style.display=taxDueTab==='cal'?'none':''; if(tc)tc.style.display=taxDueTab==='list'?'none':'';
+    document.querySelectorAll('.due-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.tab===taxDueTab)); }
+  else if(a==='calprev'||a==='calnext'){ const delta=a==='calprev'?-1:1; if(!taxCalMonth)taxCalMonth=new Date(); taxCalMonth=new Date(taxCalMonth.getFullYear(),taxCalMonth.getMonth()+delta,1); taxCalSel=null; renderTaxDueCalendar(); }
+  else if(a==='calday'){ taxCalSel=el.dataset.date; renderTaxDueCalendar(); }
+  else if(a==='donetoggle'){ const k=el.dataset.key; const mk=curMonthKey(); if(!state.taxDone[mk])state.taxDone[mk]={}; state.taxDone[mk][k]=el.checked; save(); renderTaxDone(); }
+  else if(a==='doneadd'){ const inp=document.getElementById('done-add-in'); const v=inp?inp.value.trim():''; if(!v)return; const mk=curMonthKey(); if(!state.taxDone[mk])state.taxDone[mk]={}; if(v in state.taxDone[mk]){ toast('已存在'); return; } state.taxDone[mk][v]=false; save(); renderTaxDone(); }
+  else if(a==='donereset'){ if(confirm('确定重置本月勾选清单？')){ delete state.taxDone[curMonthKey()]; save(); renderTaxDone(); } }
+  else if(a==='add'){ openModal(el.dataset.type); }
+  else if(a==='edit'){ openModal(el.dataset.type,el.dataset.id); }
+  else if(a==='toggle-todo'){ const t=state.todos.find(x=>x.id===el.dataset.id); if(t){t.done=!t.done;save();render();} }
+  else if(a==='delete'){ const ty=el.dataset.type,id=el.dataset.id;
+    const arr = ty==='todo'?'todos':ty==='bookmark'?'bookmarks':'notes';
+    if(confirm('确定删除？')){ state[arr]=state[arr].filter(x=>x.id!==id); save(); render(); toast('已删除'); } }
+});
+// drag reorder todos
+let dragId=null;
+document.addEventListener('dragstart',e=>{ const t=e.target.closest('.todo'); if(t){dragId=t.dataset.id;t.classList.add('dragging');} });
+document.addEventListener('dragend',e=>{ const t=e.target.closest('.todo'); if(t)t.classList.remove('dragging'); });
+document.addEventListener('dragover',e=>{ e.preventDefault(); });
+document.addEventListener('drop',e=>{
+  e.preventDefault(); const t=e.target.closest('.todo'); if(!t||!dragId||t.dataset.id===dragId)return;
+  const from=state.todos.findIndex(x=>x.id===dragId); const to=state.todos.findIndex(x=>x.id===t.dataset.id);
+  if(from<0||to<0)return; const [m]=state.todos.splice(from,1); state.todos.splice(to,0,m); save(); render();
+});
+
+document.getElementById('search').addEventListener('input',e=>{ searchTerm=e.target.value.trim(); render(); });
+document.getElementById('themeBtn').onclick=()=>{ const d=document.documentElement; const cur=d.dataset.theme==='dark'?'light':'dark';
+  d.dataset.theme=cur; state.settings.theme=cur; save(); document.getElementById('themeBtn').textContent=cur==='dark'?'☀':'🌙'; };
+document.getElementById('exportBtn').onclick=()=>{ const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='workbench-backup-'+new Date().toISOString().slice(0,10)+'.json'; a.click(); toast('已导出备份'); };
+document.getElementById('importBtn').onclick=()=>document.getElementById('importFile').click();
+document.getElementById('importFile').onchange=e=>{ const f=e.target.files[0]; if(!f)return; const r=new FileReader();
+  r.onload=()=>{ try{ const p=JSON.parse(r.result); if(confirm('导入将覆盖当前数据，确定？')){ state={...state,...p}; save(); render(); toast('已导入'); } }
+  catch(err){ toast('文件格式错误'); } }; r.readAsText(f); e.target.value=''; };
+document.getElementById('mask').addEventListener('click',e=>{ if(e.target.id==='mask')closeModal(); });
+document.getElementById('lb').addEventListener('click',()=>document.getElementById('lb').classList.remove('show'));
+document.addEventListener('keydown',e=>{ if(e.key==='/'&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'){ e.preventDefault(); document.getElementById('search').focus(); }
+  if(e.key==='Escape')closeModal(); });
+
+function tick(){ const d=new Date(); document.getElementById('clock').textContent=
+  d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+' '+
+  String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+':'+String(d.getSeconds()).padStart(2,'0'); }
+
+/* init */
+load(); ensureSeed();
+document.documentElement.dataset.theme=state.settings.theme||'light';
+document.getElementById('themeBtn').textContent=(state.settings.theme==='dark')?'☀':'🌙';
+tick(); setInterval(tick,1000);
+render();
+</script>
+</body>
+</html>
