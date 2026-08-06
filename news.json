@@ -1,35 +1,22 @@
 {
-  "updated": "2026-08-05",
+  "updated": "2026-08-06",
   "sources": [
     "国家税务总局",
     "财政部",
-    "财政部会计司",
     "中国人民银行"
   ],
   "items": [
     {
-      "source": "财政部会计司",
-      "title": "财政部会计司有关负责人就修订印发《企业会计准...",
-      "date": "2026-08-05",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202608/t20260805_3994932.htm"
+      "source": "中国人民银行",
+      "title": "中阿（根廷）两国央行续签双边本币互换协议",
+      "date": "2026-08-06",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080614361480356/index.html"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于印发《企业会计准则第30号——财务报表列报...",
+      "source": "财政部",
+      "title": "《企业会计准则第30号——财务报表列报》修订印发",
       "date": "2026-08-05",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《政府会计准则制度解释第8号（征求意见...",
-      "date": "2026-08-04",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202608/t20260803_3994682.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "财政部发布《2025年度企业会计准则实施情况分析...",
-      "date": "2026-08-03",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202608/t20260803_3994684.htm"
     },
     {
       "source": "中国人民银行",
@@ -92,12 +79,6 @@
       "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "财政部会计司发布《企业会计准则解释第20号》相...",
-      "date": "2026-07-24",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202607/t20260724_3994229.htm"
-    },
-    {
       "source": "中国人民银行",
       "title": "中国人民银行副行长、国家外汇管理局局长朱鹤新出席东亚及太平洋中央银行行...",
       "date": "2026-07-23",
@@ -146,30 +127,6 @@
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026071714315618324/index.html"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于征求《会计改革与发展“十五五”规划（征求...",
-      "date": "2026-07-15",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202607/t20260714_3993483.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "国新办举行新闻发布会 介绍2026年上半年货币政策执行和金融统计数据情况",
-      "date": "2026-07-15",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026071518015458230/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于2026年度高级会计师资格考试合格标准等有关...",
-      "date": "2026-07-14",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202607/t20260714_3993453.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "第八届“一带一路”会计准则合作论坛联合公报",
-      "date": "2026-07-13",
-      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260713_3993389.htm"
-    },
-    {
       "source": "财政部",
       "title": "财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告",
       "date": "2026-07-03",
@@ -180,24 +137,6 @@
       "title": "《管理会计应用指引第804号——财务共享服务》印发",
       "date": "2026-07-01",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《管理会计应用指引第804号——财务共享...",
-      "date": "2026-07-01",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "财政部会计司发布企业会计准则实施问答和应用案...",
-      "date": "2026-06-18",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202606/t20260618_3991879.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《企业会计准则解释第20号》的通知",
-      "date": "2026-06-17",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
     },
     {
       "source": "财政部",
@@ -212,12 +151,6 @@
       "url": "http://jjs.mof.gov.cn/zhengcefagui/202606/t20260604_3991164.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "财政部、中国证监会有关部门负责人就两家内地会...",
-      "date": "2026-05-08",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202605/t20260506_3989014.htm"
-    },
-    {
       "source": "财政部",
       "title": "国务院关税税则委员会关于对非洲建交国实施零关税举措的公告",
       "date": "2026-04-28",
@@ -230,12 +163,6 @@
       "url": "http://sbs.mof.gov.cn/zhengcefabu/202604/t20260421_3988007.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "郭婷婷会见国际财务报告准则基金会...",
-      "date": "2026-04-27",
-      "url": "http://kjs.mof.gov.cn/tpbd_3/202604/t20260427_3988537.htm"
-    },
-    {
       "source": "财政部",
       "title": "关于扩大地方政府专项债券项目“自审自发”试点范围的通知",
       "date": "2026-04-24",
@@ -246,6 +173,78 @@
       "title": "财政部、交通运输部支持新一轮国家综合货运枢纽补链强链提升行动",
       "date": "2026-04-10",
       "url": "http://jjs.mof.gov.cn/tongzhigonggao/202604/t20260409_3987253.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "国务院关税税则委员会关于对原产于刚果（布）的部分进口货物实施共同发展经济伙伴关系协定早期收获安排协定税率的公告",
+      "date": "2026-03-27",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260326_3986134.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "中国国际服务贸易交易会展期内销售的进口展品税收优惠政策明确",
+      "date": "2026-03-05",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260303_3984571.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "“十五五”期间相关展会展期内销售的进口展品税收优惠政策明确",
+      "date": "2026-03-05",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260303_3984570.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "“十五五”期间广交会展期内销售的进口展品税收优惠政策明确",
+      "date": "2026-03-05",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260203_3983200.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《农村综合改革转移支付资金管理办法》有关事项的补充通知印发",
+      "date": "2026-03-04",
+      "url": "http://nys.mof.gov.cn/czpjZhengCeFaBu_2_2/202603/t20260302_3984471.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "四部门印发通知要求做好帮扶小额信贷工作",
+      "date": "2026-03-03",
+      "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202603/t20260302_3984427.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "国务院关税税则委员会关于调整对原产于加拿大的部分进口商品加征关税措施的公告",
+      "date": "2026-02-27",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260227_3984176.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门出台“十五五”期间支持科技创新进口税收优惠政策",
+      "date": "2026-02-14",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260213_3983799.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "跨境电子商务出口退运商品税收优惠政策明确",
+      "date": "2026-02-09",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260209_3983561.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门关于海南自由贸易港岛内居民消费的进境商品“零关税”政策的通知",
+      "date": "2026-02-05",
+      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260204_3983267.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部印发通知推动解决政府采购异常低价问题",
+      "date": "2026-01-22",
+      "url": "http://gks.mof.gov.cn/guizhangzhidu/202601/t20260121_3982332.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平经济思想指引中国经济高质量发展行稳致远 习近平经济思想指引中国经济高质量发展行稳致远",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20260803/5486539215f84753b83d7b96e96a0142/c.html"
     }
   ]
 }
