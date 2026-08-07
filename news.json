@@ -1,28 +1,15 @@
 {
-  "updated": "2026-08-06",
+  "updated": "2026-08-07",
   "sources": [
-    "国家税务总局",
     "财政部",
-    "中国人民银行"
+    "财政部会计司"
   ],
   "items": [
-    {
-      "source": "中国人民银行",
-      "title": "中阿（根廷）两国央行续签双边本币互换协议",
-      "date": "2026-08-06",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080614361480356/index.html"
-    },
     {
       "source": "财政部",
       "title": "《企业会计准则第30号——财务报表列报》修订印发",
       "date": "2026-08-05",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行召开2026年下半年工作会议",
-      "date": "2026-08-02",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080209562668921/index.html"
     },
     {
       "source": "财政部",
@@ -31,40 +18,10 @@
       "url": "http://jrs.mof.gov.cn/zhengcefabu/gszl/202607/t20260731_3994642.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "金融监管总局 中国人民银行 中国证监会 财政部关于健全金融机构治理的实施意...",
-      "date": "2026-07-31",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073110395678929/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见哈萨克斯坦国家银行行长苏莱曼诺夫、金融市场监...",
-      "date": "2026-07-30",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073016573896571/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能会见印度尼西亚银行副行长托马斯·吉万多诺",
-      "date": "2026-07-30",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073016322513308/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行等九部门联合印发《关于加强科技金融领域数据开发利用的通知》",
-      "date": "2026-07-29",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072915223955058/index.html"
-    },
-    {
       "source": "财政部",
       "title": "财政部 税务总局关于调整部分能源资源行业企业城镇土地使用税政策的公告",
       "date": "2026-07-28",
       "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260728_3994425.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年二季度金融机构贷款投向统计报告",
-      "date": "2026-07-28",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072719364116939/index.html"
     },
     {
       "source": "财政部",
@@ -77,54 +34,6 @@
       "title": "财政部等三部门印发《征收挥发性有机物环境保护税试点实施办法》",
       "date": "2026-07-24",
       "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长、国家外汇管理局局长朱鹤新出席东亚及太平洋中央银行行...",
-      "date": "2026-07-23",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072318165563100/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行公告﹝2026﹞第18号",
-      "date": "2026-07-22",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072208461796389/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能会见加拿大养老基金投资公司总裁兼首席执行官约翰...",
-      "date": "2026-07-22",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072216185718113/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年6月金融市场运行情况",
-      "date": "2026-07-22",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072214590478488/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行新增支农支小再贷款额度1000亿元 支持部分地区防汛救灾及灾后重...",
-      "date": "2026-07-21",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072118270241573/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能与欧盟委员会金融稳定、金融服务和资本市场联盟总...",
-      "date": "2026-07-20",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026072016370956377/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能会见布基纳法索经济财政部部长阿布巴卡尔·纳卡纳...",
-      "date": "2026-07-18",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026071814542725789/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见利比亚央行行长纳吉·伊萨·贝尔卡西姆",
-      "date": "2026-07-17",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026071714315618324/index.html"
     },
     {
       "source": "财政部",
@@ -241,10 +150,16 @@
       "url": "http://gks.mof.gov.cn/guizhangzhidu/202601/t20260121_3982332.htm"
     },
     {
-      "source": "国家税务总局",
-      "title": "习近平经济思想指引中国经济高质量发展行稳致远 习近平经济思想指引中国经济高质量发展行稳致远",
+      "source": "财政部会计司",
+      "title": "京ICP备05002860号",
       "date": "",
-      "url": "https://www.news.cn/politics/leaders/20260803/5486539215f84753b83d7b96e96a0142/c.html"
+      "url": "https://beian.miit.gov.cn/#/Integrated/index"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "京公网安备11010202000006号",
+      "date": "",
+      "url": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202000006"
     }
   ]
 }
