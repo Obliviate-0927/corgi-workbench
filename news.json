@@ -1,6 +1,7 @@
 {
-  "updated": "2026-08-15",
+  "updated": "2026-08-16",
   "sources": [
+    "国家税务总局",
     "财政部",
     "中国人民银行"
   ],
@@ -240,10 +241,10 @@
       "url": "http://gks.mof.gov.cn/guizhangzhidu/202601/t20260121_3982332.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "京ICP备05073439号",
+      "source": "国家税务总局",
+      "title": "习近平经济思想指引中国经济高质量发展行稳致远",
       "date": "",
-      "url": "https://beian.miit.gov.cn/"
+      "url": "https://www.news.cn/politics/leaders/20260803/5486539215f84753b83d7b96e96a0142/c.html"
     }
   ]
 }
