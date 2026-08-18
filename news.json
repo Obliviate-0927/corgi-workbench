@@ -1,16 +1,82 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "sources": [
-    "国家税务总局",
     "财政部",
-    "财政部会计司"
+    "财政部会计司",
+    "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行新增8家数字人民币业务运营机构",
+      "date": "2026-08-17",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081714114337358/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行公告﹝2026﹞第21号",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081417014187625/index.html"
+    },
     {
       "source": "财政部会计司",
       "title": "从事证券服务业务会计师事务所注销备案名单",
       "date": "2026-08-14",
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202608/t20260814_3995459.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行 国家外汇管理局发布《关于跨国公司本外币跨境资金集中运营业务...",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081410142217598/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年7月金融统计数据报告",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081414193264304/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长邹澜出席金砖国家财长和央行行长会议",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081410062044799/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年第二季度中国货币政策执行报告",
+      "date": "2026-08-12",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218034520348/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年上半年中国货币政策大事记",
+      "date": "2026-08-12",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218065921908/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行印发《中国人民银行“十五五”改革发展规划》",
+      "date": "2026-08-10",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081018132329141/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行公告〔2026〕第20号",
+      "date": "2026-08-10",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081015473613597/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行与马来西亚国家银行续签双边本币互换协议",
+      "date": "2026-08-07",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080708481628617/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中阿（根廷）两国央行续签双边本币互换协议",
+      "date": "2026-08-06",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080614361480356/index.html"
     },
     {
       "source": "财政部",
@@ -43,10 +109,34 @@
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202608/t20260803_3994684.htm"
     },
     {
+      "source": "中国人民银行",
+      "title": "中国人民银行召开2026年下半年工作会议",
+      "date": "2026-08-02",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080209562668921/index.html"
+    },
+    {
       "source": "财政部",
       "title": "四部门出台健全金融机构治理实施意见",
       "date": "2026-07-31",
       "url": "http://jrs.mof.gov.cn/zhengcefabu/gszl/202607/t20260731_3994642.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "金融监管总局 中国人民银行 中国证监会 财政部关于健全金融机构治理的实施意...",
+      "date": "2026-07-31",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073110395678929/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见哈萨克斯坦国家银行行长苏莱曼诺夫、金融市场监...",
+      "date": "2026-07-30",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073016573896571/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长宣昌能会见印度尼西亚银行副行长托马斯·吉万多诺",
+      "date": "2026-07-30",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073016322513308/index.html"
     },
     {
       "source": "财政部",
@@ -155,96 +245,6 @@
       "title": "关于扩大地方政府专项债券项目“自审自发”试点范围的通知",
       "date": "2026-04-24",
       "url": "http://zwgls.mof.gov.cn/zcgz/202604/t20260424_3988356.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部、交通运输部支持新一轮国家综合货运枢纽补链强链提升行动",
-      "date": "2026-04-10",
-      "url": "http://jjs.mof.gov.cn/tongzhigonggao/202604/t20260409_3987253.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "全国会计专业技术资格考试领导小组办公室发布202...",
-      "date": "2026-04-10",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202604/t20260409_3987210.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "国务院关税税则委员会关于对原产于刚果（布）的部分进口货物实施共同发展经济伙伴关系协定早期收获安排协定税率的公告",
-      "date": "2026-03-27",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260326_3986134.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "中国国际服务贸易交易会展期内销售的进口展品税收优惠政策明确",
-      "date": "2026-03-05",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260303_3984571.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "“十五五”期间相关展会展期内销售的进口展品税收优惠政策明确",
-      "date": "2026-03-05",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260303_3984570.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "“十五五”期间广交会展期内销售的进口展品税收优惠政策明确",
-      "date": "2026-03-05",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260203_3983200.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "《农村综合改革转移支付资金管理办法》有关事项的补充通知印发",
-      "date": "2026-03-04",
-      "url": "http://nys.mof.gov.cn/czpjZhengCeFaBu_2_2/202603/t20260302_3984471.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "四部门印发通知要求做好帮扶小额信贷工作",
-      "date": "2026-03-03",
-      "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202603/t20260302_3984427.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "国务院关税税则委员会关于调整对原产于加拿大的部分进口商品加征关税措施的公告",
-      "date": "2026-02-27",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260227_3984176.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部等三部门出台“十五五”期间支持科技创新进口税收优惠政策",
-      "date": "2026-02-14",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260213_3983799.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "跨境电子商务出口退运商品税收优惠政策明确",
-      "date": "2026-02-09",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260209_3983561.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部等三部门关于海南自由贸易港岛内居民消费的进境商品“零关税”政策的通知",
-      "date": "2026-02-05",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260204_3983267.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "财政部会计司有关负责人就开展2025年度行政事业...",
-      "date": "2026-01-29",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202601/t20260129_3982851.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《可持续信息鉴证业务准则 第6101号——...",
-      "date": "2026-01-27",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202601/t20260127_3982643.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部印发通知推动解决政府采购异常低价问题",
-      "date": "2026-01-22",
-      "url": "http://gks.mof.gov.cn/guizhangzhidu/202601/t20260121_3982332.htm"
     }
   ]
 }
