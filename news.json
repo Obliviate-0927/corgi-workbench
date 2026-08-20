@@ -1,9 +1,89 @@
 {
-  "updated": "2026-08-19",
+  "updated": "2026-08-20",
   "sources": [
-    "财政部"
+    "国家税务总局",
+    "财政部",
+    "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见澳门银行公会代表团",
+      "date": "2026-08-19",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081919184870631/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中澳（大利亚）两国央行续签双边本币互换协议",
+      "date": "2026-08-19",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081915294182128/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行新增8家数字人民币业务运营机构",
+      "date": "2026-08-17",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081714114337358/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行公告﹝2026﹞第21号",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081417014187625/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行 国家外汇管理局发布《关于跨国公司本外币跨境资金集中运营业务...",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081410142217598/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年7月金融统计数据报告",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081414193264304/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长邹澜出席金砖国家财长和央行行长会议",
+      "date": "2026-08-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081410062044799/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年第二季度中国货币政策执行报告",
+      "date": "2026-08-12",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218034520348/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年上半年中国货币政策大事记",
+      "date": "2026-08-12",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218065921908/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行印发《中国人民银行“十五五”改革发展规划》",
+      "date": "2026-08-10",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081018132329141/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行公告〔2026〕第20号",
+      "date": "2026-08-10",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081015473613597/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行与马来西亚国家银行续签双边本币互换协议",
+      "date": "2026-08-07",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080708481628617/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中阿（根廷）两国央行续签双边本币互换协议",
+      "date": "2026-08-06",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080614361480356/index.html"
+    },
     {
       "source": "财政部",
       "title": "《企业会计准则第30号——财务报表列报》修订印发",
@@ -11,10 +91,22 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
     },
     {
+      "source": "中国人民银行",
+      "title": "中国人民银行召开2026年下半年工作会议",
+      "date": "2026-08-02",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026080209562668921/index.html"
+    },
+    {
       "source": "财政部",
       "title": "四部门出台健全金融机构治理实施意见",
       "date": "2026-07-31",
       "url": "http://jrs.mof.gov.cn/zhengcefabu/gszl/202607/t20260731_3994642.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "金融监管总局 中国人民银行 中国证监会 财政部关于健全金融机构治理的实施意...",
+      "date": "2026-07-31",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026073110395678929/index.html"
     },
     {
       "source": "财政部",
@@ -147,6 +239,12 @@
       "title": "财政部印发通知推动解决政府采购异常低价问题",
       "date": "2026-01-22",
       "url": "http://gks.mof.gov.cn/guizhangzhidu/202601/t20260121_3982332.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "中办国办关于更高水平更高质量做好节能降碳工作的意见",
+      "date": "",
+      "url": "https://www.gov.cn/yaowen/liebiao/202604/content_7066615.htm"
     }
   ]
 }
