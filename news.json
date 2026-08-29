@@ -1,16 +1,33 @@
 {
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "sources": [
-    "国家税务总局",
     "财政部",
     "中国人民银行"
   ],
   "items": [
     {
+      "source": "财政部",
+      "title": "《会计师事务所职业责任保险实施办法》修订印发",
+      "date": "2026-08-28",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行有关部门负责人就《关于改革完善房地产信贷管理 推动加快构建房...",
+      "date": "2026-08-28",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082816463825521/index.html"
+    },
+    {
       "source": "中国人民银行",
       "title": "中国人民银行公告﹝2026﹞第22号",
       "date": "2026-08-28",
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082809193480410/index.html"
+    },
+    {
+      "source": "财政部",
+      "title": "非应税交易等增值税有关事项明确",
+      "date": "2026-08-28",
+      "url": "http://szs.mof.gov.cn/zhengcefabu/202608/t20260828_3996295.htm"
     },
     {
       "source": "财政部",
@@ -101,12 +118,6 @@
       "title": "中国人民银行印发《中国人民银行“十五五”改革发展规划》",
       "date": "2026-08-10",
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081018132329141/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行公告〔2026〕第20号",
-      "date": "2026-08-10",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081015473613597/index.html"
     },
     {
       "source": "财政部",
@@ -229,22 +240,10 @@
       "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260227_3984176.htm"
     },
     {
-      "source": "财政部",
-      "title": "财政部等三部门出台“十五五”期间支持科技创新进口税收优惠政策",
-      "date": "2026-02-14",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260213_3983799.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "跨境电子商务出口退运商品税收优惠政策明确",
-      "date": "2026-02-09",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202602/t20260209_3983561.htm"
-    },
-    {
-      "source": "国家税务总局",
-      "title": "中办国办关于更高水平更高质量做好节能降碳工作的意见",
+      "source": "中国人民银行",
+      "title": "京ICP备05073439号",
       "date": "",
-      "url": "https://www.gov.cn/yaowen/liebiao/202604/content_7066615.htm"
+      "url": "https://beian.miit.gov.cn/"
     }
   ]
 }
