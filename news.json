@@ -1,11 +1,22 @@
 {
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "sources": [
-    "国家税务总局",
     "财政部",
     "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见国际金融机构负责人和相关国家财长及央行行长",
+      "date": "2026-09-02",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026090214474837364/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜出席二十国集团财长和央行行长会议",
+      "date": "2026-09-02",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026090214465859469/index.html"
+    },
     {
       "source": "财政部",
       "title": "《改善普通高中学校办学条件补助资金管理办法》修订印发",
@@ -113,18 +124,6 @@
       "title": "2026年第二季度中国货币政策执行报告",
       "date": "2026-08-12",
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218034520348/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年上半年中国货币政策大事记",
-      "date": "2026-08-12",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081218065921908/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行印发《中国人民银行“十五五”改革发展规划》",
-      "date": "2026-08-10",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081018132329141/index.html"
     },
     {
       "source": "财政部",
@@ -241,10 +240,10 @@
       "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202603/t20260302_3984427.htm"
     },
     {
-      "source": "国家税务总局",
-      "title": "中办国办关于更高水平更高质量做好节能降碳工作的意见",
+      "source": "中国人民银行",
+      "title": "京ICP备05073439号",
       "date": "",
-      "url": "https://www.gov.cn/yaowen/liebiao/202604/content_7066615.htm"
+      "url": "https://beian.miit.gov.cn/"
     }
   ]
 }
