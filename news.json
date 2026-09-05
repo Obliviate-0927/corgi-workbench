@@ -1,11 +1,17 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "sources": [
     "国家税务总局",
     "财政部",
     "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行召开树立和践行正确政绩观学习教育总结会议",
+      "date": "2026-09-04",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026090414583025333/index.html"
+    },
     {
       "source": "中国人民银行",
       "title": "2026年2季度末金融业机构总资产562.2万亿元",
@@ -119,12 +125,6 @@
       "title": "2026年7月金融统计数据报告",
       "date": "2026-08-14",
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081414193264304/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长邹澜出席金砖国家财长和央行行长会议",
-      "date": "2026-08-14",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081410062044799/index.html"
     },
     {
       "source": "财政部",
