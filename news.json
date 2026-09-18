@@ -1,6 +1,7 @@
 {
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "sources": [
+    "国家税务总局",
     "财政部",
     "财政部会计司",
     "中国人民银行"
@@ -8,21 +9,21 @@
   "items": [
     {
       "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能会见伦敦证券交易所集团富时罗素首席执行官菲奥娜...",
-      "date": "2026-09-16",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026091611280492893/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《企业会计准则解释第22号（征求意见稿...",
-      "date": "2026-09-15",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260915_3997441.htm"
+      "title": "中国人民银行副行长宣昌能会见贝宝全球执行副总裁艾伦",
+      "date": "2026-09-17",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026091717202687422/index.html"
     },
     {
       "source": "财政部会计司",
       "title": "关于征求《企业会计准则解释第21号（征求意见稿...",
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260915_3997440.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长宣昌能会见伦敦证券交易所集团富时罗素首席执行官菲奥娜...",
+      "date": "2026-09-16",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026091611280492893/index.html"
     },
     {
       "source": "财政部",
@@ -157,12 +158,6 @@
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082717370314545/index.html"
     },
     {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长陆磊出席第十五届中国支付清算论坛",
-      "date": "2026-08-27",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026082717390451589/index.html"
-    },
-    {
       "source": "财政部",
       "title": "财政部等三部门联合发文部署进一步做好财政金融协同促内需政策有关工作",
       "date": "2026-08-21",
@@ -191,6 +186,12 @@
       "title": "财政部会计司有关负责人就修订印发《企业会计准...",
       "date": "2026-08-05",
       "url": "http://kjs.mof.gov.cn/zhengcejiedu/202608/t20260805_3994932.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "财政部发布《2025年度企业会计准则实施情况分析...",
+      "date": "2026-08-03",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202608/t20260803_3994684.htm"
     },
     {
       "source": "财政部",
