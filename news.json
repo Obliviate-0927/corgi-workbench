@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "sources": [
     "国家税务总局",
     "财政部",
@@ -9,8 +9,14 @@
   "items": [
     {
       "source": "财政部会计司",
+      "title": "关于征求《行政事业单位内部控制规范（修订征求...",
+      "date": "2026-10-08",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261008_3998563.htm"
+    },
+    {
+      "source": "财政部会计司",
       "title": "关于征求《企业会计准则——会计科目和主要账务...",
-      "date": "2026-09-30",
+      "date": "2026-10-08",
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260930_3998445.htm"
     },
     {
@@ -114,12 +120,6 @@
       "title": "中国人民银行副行长宣昌能会见贝宝全球执行副总裁艾伦",
       "date": "2026-09-17",
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026091717202687422/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《企业会计准则解释第21号（征求意见稿...",
-      "date": "2026-09-16",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260915_3997440.htm"
     },
     {
       "source": "中国人民银行",
