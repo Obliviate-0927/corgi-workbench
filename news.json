@@ -1,11 +1,17 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "sources": [
     "国家税务总局",
     "财政部",
     "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见法国总统外事顾问博纳",
+      "date": "2026-10-10",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101011293518009/index.html"
+    },
     {
       "source": "中国人民银行",
       "title": "中国人民银行行长潘功胜会见高盛集团总裁兼首席运营官温泽恩",
@@ -95,12 +101,6 @@
       "title": "《紧急采购管理暂行办法》印发",
       "date": "2026-09-14",
       "url": "http://gks.mof.gov.cn/guizhangzhidu/202609/t20260911_3997286.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年8月金融统计数据报告",
-      "date": "2026-09-14",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026091414593871200/index.html"
     },
     {
       "source": "财政部",
