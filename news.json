@@ -1,8 +1,9 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "sources": [
     "国家税务总局",
     "财政部",
+    "财政部会计司",
     "中国人民银行"
   ],
   "items": [
@@ -236,15 +237,15 @@
     },
     {
       "source": "国家税务总局",
-      "title": "李强主持召开国务院常务会议 研究宏观政策发力提效、促进有效投资有关工作等",
-      "date": "",
-      "url": "https://www.news.cn/politics/leaders/20260928/ee6c0a0c5930486e988209993a23e770/c.html"
-    },
-    {
-      "source": "国家税务总局",
       "title": "国务院办公厅关于印发《“高效办成一件事”2026年度第二批重点事项清单》的通知",
       "date": "",
       "url": "https://www.gov.cn/zhengce/content/202609/content_7081880.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "税费优惠政策助力推动健康中国建设",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5252915/content.html"
     }
   ]
 }
