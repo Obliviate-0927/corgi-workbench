@@ -1,14 +1,88 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "sources": [
-    "财政部"
+    "国家税务总局",
+    "财政部",
+    "中国人民银行"
   ],
   "items": [
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长宣昌能会见巴西国库秘书丹尼尔·莱亚尔",
+      "date": "2026-10-20",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026102015385657734/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见桥水投资公司创始人瑞·达利欧",
+      "date": "2026-10-20",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026102010021052538/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜在2026金融街论坛年会上的主题演讲",
+      "date": "2026-10-19",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101918374958873/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行副行长宣昌能出席全球主权债务圆桌会等会议并会见相关机构负责...",
+      "date": "2026-10-18",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101718262172570/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜出席第54届国际货币与金融委员会会议",
+      "date": "2026-10-17",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101715340431532/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见相关国家央行行长",
+      "date": "2026-10-17",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101712191431436/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜会见国际货币基金组织总裁格奥尔基耶娃",
+      "date": "2026-10-16",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101622061793966/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜出席新兴市场研讨会",
+      "date": "2026-10-16",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101614165534664/index.html"
+    },
     {
       "source": "财政部",
       "title": "《城乡义务教育补助经费管理办法》修订印发",
       "date": "2026-10-15",
       "url": "http://jkw.mof.gov.cn/zhengcefabu/202610/t20261014_4002838.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行行长潘功胜出席二十国集团财长和央行行长会议",
+      "date": "2026-10-15",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101517581023878/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "潘功胜行长出席中国与海合会第四次央行行长会并举行系列双边会见",
+      "date": "2026-10-15",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101510063698366/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "第十五届中日韩央行行长会议在曼谷举行",
+      "date": "2026-10-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101418371517078/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年前三季度金融统计数据报告",
+      "date": "2026-10-14",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026101415422529740/index.html"
     },
     {
       "source": "财政部",
@@ -147,6 +221,30 @@
       "title": "中国国际服务贸易交易会展期内销售的进口展品税收优惠政策明确",
       "date": "2026-03-05",
       "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202603/t20260303_3984571.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平：以更高标准、更实举措推进全面从严治党",
+      "date": "",
+      "url": "https://www.news.cn/20261015/4a77286b798b4b868c26afe4d2384ad1/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "《求是》杂志发表习近平总书记重要文章《以更高标准、更实举措推进全面从严治党》",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261015/70afef7909e548fe88f7cc2b6a820f9b/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "中共中央 国务院关于发展新质生产力的意见",
+      "date": "",
+      "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7082819.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "国务院办公厅关于印发《“高效办成一件事”2026年度第二批重点事项清单》的通知",
+      "date": "",
+      "url": "https://www.gov.cn/zhengce/content/202609/content_7081880.htm"
     }
   ]
 }
