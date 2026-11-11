@@ -1,9 +1,16 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "sources": [
-    "财政部"
+    "财政部",
+    "财政部会计司"
   ],
   "items": [
+    {
+      "source": "财政部会计司",
+      "title": "关于就国际可持续准则理事会发布的《国际财务报...",
+      "date": "2026-11-10",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202611/t20261109_4004283.htm"
+    },
     {
       "source": "财政部",
       "title": "国务院关税税则委员会关于调整对原产于美国的进口商品加征关税措施的公告",
@@ -23,10 +30,52 @@
       "url": "http://jkw.mof.gov.cn/zhengcefabu/202610/t20261014_4002838.htm"
     },
     {
+      "source": "财政部会计司",
+      "title": "关于就国际会计准则理事会发布的金融工具准则实...",
+      "date": "2026-10-12",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261012_4002610.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于征求《行政事业单位内部控制规范（修订征求...",
+      "date": "2026-10-09",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261008_3998563.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于征求《企业会计准则——会计科目和主要账务...",
+      "date": "2026-10-08",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260930_3998445.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于征求《〈企业可持续披露准则第1号——气候（...",
+      "date": "2026-09-30",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260929_3998329.htm"
+    },
+    {
       "source": "财政部",
       "title": "财政部 中国人民银行 金融监管总局关于实施居民购房贷款贴息政策的通知",
       "date": "2026-09-29",
       "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202609/t20260929_3998312.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "强化协会职能作用 创新推动行业高质量发展 ——...",
+      "date": "2026-09-28",
+      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202609/t20260924_3998130.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于征求《财政部关于加快推进会计数智化工作的...",
+      "date": "2026-09-22",
+      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260921_3997874.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "准则筑基二十载 赋能发展向未来",
+      "date": "2026-09-20",
+      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202609/t20260917_3997625.htm"
     },
     {
       "source": "财政部",
@@ -49,6 +98,12 @@
     {
       "source": "财政部",
       "title": "《会计师事务所职业责任保险实施办法》修订印发",
+      "date": "2026-08-28",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《会计师事务所职业责任保险实施办法》...",
       "date": "2026-08-28",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
     },
@@ -77,6 +132,12 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
     },
     {
+      "source": "财政部会计司",
+      "title": "关于印发《企业会计准则第30号——财务报表列报...",
+      "date": "2026-08-05",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
+    },
+    {
       "source": "财政部",
       "title": "四部门出台健全金融机构治理实施意见",
       "date": "2026-07-31",
@@ -101,6 +162,18 @@
       "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
     },
     {
+      "source": "财政部会计司",
+      "title": "第八届“一带一路”国家会计准则合作论坛联合公报",
+      "date": "2026-07-13",
+      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260713_3993389.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "第八届“一带一路”国家会计准则合作论坛成功举办",
+      "date": "2026-07-10",
+      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260710_3993271.htm"
+    },
+    {
       "source": "财政部",
       "title": "财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告",
       "date": "2026-07-03",
@@ -111,6 +184,18 @@
       "title": "《管理会计应用指引第804号——财务共享服务》印发",
       "date": "2026-07-01",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《管理会计应用指引第804号——财务共享...",
+      "date": "2026-07-01",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《企业会计准则解释第20号》的通知",
+      "date": "2026-06-17",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
     },
     {
       "source": "财政部",
@@ -137,6 +222,12 @@
       "url": "http://sbs.mof.gov.cn/zhengcefabu/202604/t20260421_3988007.htm"
     },
     {
+      "source": "财政部会计司",
+      "title": "郭婷婷会见国际财务报告准则基金会...",
+      "date": "2026-04-27",
+      "url": "http://kjs.mof.gov.cn/tpbd_3/202604/t20260427_3988537.htm"
+    },
+    {
       "source": "财政部",
       "title": "关于扩大地方政府专项债券项目“自审自发”试点范围的通知",
       "date": "2026-04-24",
@@ -147,6 +238,12 @@
       "title": "财政部、交通运输部支持新一轮国家综合货运枢纽补链强链提升行动",
       "date": "2026-04-10",
       "url": "http://jjs.mof.gov.cn/tongzhigonggao/202604/t20260409_3987253.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "全国会计专业技术资格考试领导小组办公室发布202...",
+      "date": "2026-04-10",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202604/t20260409_3987210.htm"
     }
   ]
 }
