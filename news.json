@@ -1,14 +1,33 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "sources": [
     "财政部",
-    "财政部会计司"
+    "财政部会计司",
+    "中国人民银行"
   ],
   "items": [
     {
+      "source": "财政部",
+      "title": "财政部印发《会计改革与发展“十五五”规划》",
+      "date": "2026-11-11",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《会计改革与发展 “十五五”规划》的通知",
+      "date": "2026-11-11",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "“十五五”时期会计高质量发展新闻发布会文字实录",
+      "date": "2026-11-11",
+      "url": "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202611/t20261111_4004515.htm"
+    },
+    {
       "source": "财政部会计司",
       "title": "关于就国际可持续准则理事会发布的《国际财务报...",
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202611/t20261109_4004283.htm"
     },
     {
@@ -22,6 +41,12 @@
       "title": "《中央自然灾害救灾资金管理办法》修订印发",
       "date": "2026-11-06",
       "url": "http://zyhj.mof.gov.cn/zcfb/202611/t20261103_4003960.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "国务院关于金融工作情况的报告——2026年11月3日在十四届全国人民代表大会常务委员会第二十五次会议上",
+      "date": "2026-11-03",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110510330636555/index.html"
     },
     {
       "source": "财政部",
@@ -220,30 +245,6 @@
       "title": "财政部、退役军人事务部制定印发《中央专项彩票公益金支持光荣院能力提升项目资金管理办法》",
       "date": "2026-04-27",
       "url": "http://sbs.mof.gov.cn/zhengcefabu/202604/t20260421_3988007.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "郭婷婷会见国际财务报告准则基金会...",
-      "date": "2026-04-27",
-      "url": "http://kjs.mof.gov.cn/tpbd_3/202604/t20260427_3988537.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "关于扩大地方政府专项债券项目“自审自发”试点范围的通知",
-      "date": "2026-04-24",
-      "url": "http://zwgls.mof.gov.cn/zcgz/202604/t20260424_3988356.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部、交通运输部支持新一轮国家综合货运枢纽补链强链提升行动",
-      "date": "2026-04-10",
-      "url": "http://jjs.mof.gov.cn/tongzhigonggao/202604/t20260409_3987253.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "全国会计专业技术资格考试领导小组办公室发布202...",
-      "date": "2026-04-10",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202604/t20260409_3987210.htm"
     }
   ]
 }
