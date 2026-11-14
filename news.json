@@ -1,12 +1,23 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "sources": [
-    "国家税务总局",
     "财政部",
     "财政部会计司",
     "中国人民银行"
   ],
   "items": [
+    {
+      "source": "财政部",
+      "title": "《财政部门行使行政处罚裁量权指导规范》修订印发",
+      "date": "2026-11-13",
+      "url": "http://tfs.mof.gov.cn/zhengcefabu/202611/t20261111_4004415.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "2026年10月金融统计数据报告",
+      "date": "2026-11-13",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111315073060062/index.html"
+    },
     {
       "source": "中国人民银行",
       "title": "金融科技发展奖评审领导小组会议召开",
@@ -140,12 +151,6 @@
       "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026103018411743702/index.html"
     },
     {
-      "source": "中国人民银行",
-      "title": "中南（非）两国央行续签双边本币互换协议",
-      "date": "2026-10-30",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026103014283647038/index.html"
-    },
-    {
       "source": "财政部",
       "title": "《城乡义务教育补助经费管理办法》修订印发",
       "date": "2026-10-15",
@@ -240,12 +245,6 @@
       "title": "财政部制定实施《2027年政府收支分类科目》",
       "date": "2026-08-27",
       "url": "http://yss.mof.gov.cn/zhengceguizhang/202608/t20260826_3996140.htm"
-    },
-    {
-      "source": "财政部",
-      "title": "财政部等三部门联合发文部署进一步做好财政金融协同促内需政策有关工作",
-      "date": "2026-08-21",
-      "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202608/t20260820_3995853.htm"
     }
   ]
 }
