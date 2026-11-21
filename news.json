@@ -1,10 +1,8 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "sources": [
-    "国家税务总局",
     "财政部",
-    "财政部会计司",
-    "中国人民银行"
+    "财政部会计司"
   ],
   "items": [
     {
@@ -20,28 +18,10 @@
       "url": "http://kjs.mof.gov.cn/guojidongtai/202611/t20261118_4004929.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "中国人民银行与加拿大财政部、加拿大央行共同签署《中加金融工作组工作规范...",
-      "date": "2026-11-18",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111809190698994/index.html"
-    },
-    {
       "source": "财政部",
       "title": "《财政部门行使行政处罚裁量权指导规范》修订印发",
       "date": "2026-11-13",
       "url": "http://tfs.mof.gov.cn/zhengcefabu/202611/t20261111_4004415.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年10月金融统计数据报告",
-      "date": "2026-11-13",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111315073060062/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "金融科技发展奖评审领导小组会议召开",
-      "date": "2026-11-12",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111210072039722/index.html"
     },
     {
       "source": "财政部",
@@ -56,18 +36,6 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "2026年第三季度中国货币政策执行报告",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111116292271519/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年前三季度中国货币政策大事记",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111116304170164/index.html"
-    },
-    {
       "source": "财政部会计司",
       "title": "“十五五”时期会计高质量发展新闻发布会文字实录",
       "date": "2026-11-11",
@@ -78,12 +46,6 @@
       "title": "关于就国际可持续准则理事会发布的《国际财务报...",
       "date": "2026-11-11",
       "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202611/t20261109_4004283.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能出席国际清算银行行长例会",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111115493736794/index.html"
     },
     {
       "source": "财政部",
@@ -98,24 +60,6 @@
       "url": "http://zyhj.mof.gov.cn/zcfb/202611/t20261103_4003960.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见摩根士丹利集团董事长彭泰德",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516262373524/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长邹澜出席第五届国际金融领袖投资峰会",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516113533346/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行与印度尼西亚银行举行联合工作机制工作会议",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110515320167091/index.html"
-    },
-    {
       "source": "财政部",
       "title": "财政部关于实施《政府综合财务报告编制操作指南》的通知",
       "date": "2026-11-04",
@@ -126,42 +70,6 @@
       "title": "财政部关于实施《政府部门财务报告编制操作指南》的通知",
       "date": "2026-11-04",
       "url": "http://gks.mof.gov.cn/guizhangzhidu/202611/t20261104_4004092.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行加力实施股票回购增持再贷款政策",
-      "date": "2026-11-04",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110408502315269/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "证券、基金、保险公司互换便利（SFISF）操作结果公告 〔2026〕第1号",
-      "date": "2026-11-03",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110313380716818/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行决定上调金融机构外汇存款准备金率",
-      "date": "2026-11-03",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110308254969050/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "国务院关于金融工作情况的报告——2026年11月3日在十四届全国人民代表大会常...",
-      "date": "2026-11-03",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110510330636555/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见阿曼中央银行行长艾哈迈德·穆萨米",
-      "date": "2026-11-03",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110318093610834/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行 金融监管总局 中国证监会召开支持资本市场两项工具座谈会",
-      "date": "2026-11-02",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110219495213912/index.html"
     },
     {
       "source": "财政部",
@@ -246,6 +154,96 @@
       "title": "非应税交易等增值税有关事项明确",
       "date": "2026-08-28",
       "url": "http://szs.mof.gov.cn/zhengcefabu/202608/t20260828_3996295.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部制定实施《2027年政府收支分类科目》",
+      "date": "2026-08-27",
+      "url": "http://yss.mof.gov.cn/zhengceguizhang/202608/t20260826_3996140.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门联合发文部署进一步做好财政金融协同促内需政策有关工作",
+      "date": "2026-08-21",
+      "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202608/t20260820_3995853.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《企业会计准则第30号——财务报表列报》修订印发",
+      "date": "2026-08-05",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《企业会计准则第30号——财务报表列报...",
+      "date": "2026-08-05",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "四部门出台健全金融机构治理实施意见",
+      "date": "2026-07-31",
+      "url": "http://jrs.mof.gov.cn/zhengcefabu/gszl/202607/t20260731_3994642.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局关于调整部分能源资源行业企业城镇土地使用税政策的公告",
+      "date": "2026-07-28",
+      "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260728_3994425.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局关于离岸信托 个人所得税有关事项的公告",
+      "date": "2026-07-24",
+      "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994261.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门印发《征收挥发性有机物环境保护税试点实施办法》",
+      "date": "2026-07-24",
+      "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "第八届“一带一路”国家会计准则合作论坛联合公报",
+      "date": "2026-07-13",
+      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260713_3993389.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "第八届“一带一路”国家会计准则合作论坛成功举办",
+      "date": "2026-07-10",
+      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260710_3993271.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告",
+      "date": "2026-07-03",
+      "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260703_3992823.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《管理会计应用指引第804号——财务共享服务》印发",
+      "date": "2026-07-01",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《管理会计应用指引第804号——财务共享...",
+      "date": "2026-07-01",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
+    },
+    {
+      "source": "财政部会计司",
+      "title": "关于印发《企业会计准则解释第20号》的通知",
+      "date": "2026-06-17",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《企业会计准则解释第20号》印发",
+      "date": "2026-06-17",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
     }
   ]
 }
