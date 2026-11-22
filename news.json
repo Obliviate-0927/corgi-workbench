@@ -1,22 +1,10 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "sources": [
-    "财政部",
-    "财政部会计司"
+    "国家税务总局",
+    "财政部"
   ],
   "items": [
-    {
-      "source": "财政部会计司",
-      "title": "建设中国特色、国际领先的会计体系 服务经济社会...",
-      "date": "2026-11-20",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202611/t20261118_4004927.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "2026年中国内地与香港企业会计准则保持持续趋同",
-      "date": "2026-11-19",
-      "url": "http://kjs.mof.gov.cn/guojidongtai/202611/t20261118_4004929.htm"
-    },
     {
       "source": "财政部",
       "title": "《财政部门行使行政处罚裁量权指导规范》修订印发",
@@ -28,24 +16,6 @@
       "title": "财政部印发《会计改革与发展“十五五”规划》",
       "date": "2026-11-11",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《会计改革与发展 “十五五”规划》的通知",
-      "date": "2026-11-11",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "“十五五”时期会计高质量发展新闻发布会文字实录",
-      "date": "2026-11-11",
-      "url": "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202611/t20261111_4004515.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于就国际可持续准则理事会发布的《国际财务报...",
-      "date": "2026-11-11",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202611/t20261109_4004283.htm"
     },
     {
       "source": "财政部",
@@ -78,46 +48,10 @@
       "url": "http://jkw.mof.gov.cn/zhengcefabu/202610/t20261014_4002838.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于就国际会计准则理事会发布的金融工具准则实...",
-      "date": "2026-10-12",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261012_4002610.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《行政事业单位内部控制规范（修订征求...",
-      "date": "2026-10-09",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261008_3998563.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《企业会计准则——会计科目和主要账务...",
-      "date": "2026-10-08",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260930_3998445.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《〈企业可持续披露准则第1号——气候（...",
-      "date": "2026-09-30",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260929_3998329.htm"
-    },
-    {
       "source": "财政部",
       "title": "财政部 中国人民银行 金融监管总局关于实施居民购房贷款贴息政策的通知",
       "date": "2026-09-29",
       "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202609/t20260929_3998312.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "强化协会职能作用 创新推动行业高质量发展 ——...",
-      "date": "2026-09-28",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202609/t20260924_3998130.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《财政部关于加快推进会计数智化工作的...",
-      "date": "2026-09-22",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260921_3997874.htm"
     },
     {
       "source": "财政部",
@@ -140,12 +74,6 @@
     {
       "source": "财政部",
       "title": "《会计师事务所职业责任保险实施办法》修订印发",
-      "date": "2026-08-28",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《会计师事务所职业责任保险实施办法》...",
       "date": "2026-08-28",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
     },
@@ -174,12 +102,6 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于印发《企业会计准则第30号——财务报表列报...",
-      "date": "2026-08-05",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
-    },
-    {
       "source": "财政部",
       "title": "四部门出台健全金融机构治理实施意见",
       "date": "2026-07-31",
@@ -204,18 +126,6 @@
       "url": "http://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "第八届“一带一路”国家会计准则合作论坛联合公报",
-      "date": "2026-07-13",
-      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260713_3993389.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "第八届“一带一路”国家会计准则合作论坛成功举办",
-      "date": "2026-07-10",
-      "url": "http://kjs.mof.gov.cn/guojidongtai/202607/t20260710_3993271.htm"
-    },
-    {
       "source": "财政部",
       "title": "财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告",
       "date": "2026-07-03",
@@ -228,22 +138,112 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于印发《管理会计应用指引第804号——财务共享...",
-      "date": "2026-07-01",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于印发《企业会计准则解释第20号》的通知",
+      "source": "财政部",
+      "title": "《企业会计准则解释第20号》印发",
       "date": "2026-06-17",
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
     },
     {
       "source": "财政部",
-      "title": "《企业会计准则解释第20号》印发",
-      "date": "2026-06-17",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
+      "title": "财政部、商务部修订印发《服务业发展资金管理办法》",
+      "date": "2026-06-10",
+      "url": "http://jjs.mof.gov.cn/zhengcefagui/202606/t20260604_3991164.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "中共中央办公厅 国务院办公厅关于推动科技创新和产业创新深度融合的意见",
+      "date": "",
+      "url": "https://www.gov.cn/yaowen/liebiao/202610/content_7083929.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "国务院办公厅关于印发《“高效办成一件事”2026年度第二批重点事项清单》的通知",
+      "date": "",
+      "url": "https://www.gov.cn/zhengce/content/202609/content_7081880.htm"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "国新办举行“开局起步‘十五五’”系列主题新闻发布会 介绍“十五五”时期税收改革发展有关情况",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5251401/content.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平主持中俄美元首会晤 习近平主持中俄美元首会晤",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261119/e36c00c334714fcda0f1145882c695cc/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平主持中俄美元首会晤",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261119/e1c82130b5e74c53ad7c0ae4f98e3aae/c.html?page=5"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平主持亚太经合组织第三十三次领导人非正式会议并发表重要讲话",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261119/4330c71468cb43c68b6f0f195951aa58/c.html?page=2"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平和彭丽媛为出席亚太经合组织第三十三次领导人非正式会议的来...",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261118/d5ddea231c1f426b82cf5649dbe7277b/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "学习贯彻党的二十届五中全会精神",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/c103168/esj5zqhindex.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "学习贯彻习近平党建思想",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/c103157/xxgcxjpdjsx.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "@国务院 我来说",
+      "date": "",
+      "url": "https://liuyan.www.gov.cn/2024wwzfgzbgtjy/bmdf.html?q=swzj"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平和彭丽媛为出席亚太经合组织第三十三次领导人非正式会议的来宾举行欢迎宴会",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261118/d7d974854fde450e8251d37edd7ba030/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "习近平出席亚太经合组织工商领导人峰会开幕式并发表主旨演讲",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261118/ece32917902d45ea8c13840c3d04a06e/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "李强出席第29次中国－东盟领导人会议",
+      "date": "",
+      "url": "https://www.news.cn/politics/leaders/20261116/19b535ee785b441bb983db2249181e49/c.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "国家税务总局召开党委理论学习中心组学习（扩大）会议 专题学习研讨党的二十届五中全会精神",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5253727/content.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "全国税务系统司局级主要领导干部学习贯彻党的二十届五中全会精神专题研讨班在京举办",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5253712/content.html"
+    },
+    {
+      "source": "国家税务总局",
+      "title": "学习贯彻党的二十届五中全会精神中央宣讲团在江苏税务开展互动宣讲",
+      "date": "",
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5253547/content.html"
     }
   ]
 }
