@@ -1,77 +1,20 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "sources": [
-    "国家税务总局",
-    "财政部",
-    "财政部会计司",
-    "中国人民银行"
+    "财政部"
   ],
   "items": [
     {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见欧洲中央银行、欧盟委员会和欧元集团相关负责人",
-      "date": "2026-11-23",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112319381491628/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行召开党的二十届五中全会精神宣讲报告会",
-      "date": "2026-11-21",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112109473354413/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行公告﹝2026﹞第29号",
-      "date": "2026-11-20",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112014315654038/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "建设中国特色、国际领先的会计体系 服务经济社会...",
-      "date": "2026-11-20",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202611/t20261118_4004927.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见万事达卡首席执行官孟轲",
-      "date": "2026-11-20",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112018344539698/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年10月金融市场运行情况",
-      "date": "2026-11-20",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112015225760018/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "2026年中国内地与香港企业会计准则保持持续趋同",
-      "date": "2026-11-19",
-      "url": "http://kjs.mof.gov.cn/guojidongtai/202611/t20261118_4004929.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行与加拿大财政部、加拿大央行共同签署《中加金融工作组工作规范...",
-      "date": "2026-11-18",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111809190698994/index.html"
+      "source": "财政部",
+      "title": "财政部等五部门制定印发 《常态化帮扶资金绩效评价办法》",
+      "date": "2026-11-25",
+      "url": "http://nys.mof.gov.cn/czpjZhengCeFaBu_2_2/202611/t20261124_4005326.htm"
     },
     {
       "source": "财政部",
       "title": "《财政部门行使行政处罚裁量权指导规范》修订印发",
       "date": "2026-11-13",
-      "url": "http://tfs.mof.gov.cn/zhengcefabu/202611/t20261111_4004415.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年10月金融统计数据报告",
-      "date": "2026-11-13",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111315073060062/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "金融科技发展奖评审领导小组会议召开",
-      "date": "2026-11-12",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111210072039722/index.html"
+      "url": "https://tfs.mof.gov.cn/zhengcefabu/202611/t20261111_4004415.htm"
     },
     {
       "source": "财政部",
@@ -80,46 +23,10 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于印发《会计改革与发展 “十五五”规划》的通知",
-      "date": "2026-11-11",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202611/t20261105_4004148.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年第三季度中国货币政策执行报告",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111116292271519/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "2026年前三季度中国货币政策大事记",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111116304170164/index.html"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "“十五五”时期会计高质量发展新闻发布会文字实录",
-      "date": "2026-11-11",
-      "url": "http://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202611/t20261111_4004515.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于就国际可持续准则理事会发布的《国际财务报...",
-      "date": "2026-11-11",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202611/t20261109_4004283.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长宣昌能出席国际清算银行行长例会",
-      "date": "2026-11-11",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026111115493736794/index.html"
-    },
-    {
       "source": "财政部",
       "title": "国务院关税税则委员会关于调整对原产于美国的进口商品加征关税措施的公告",
       "date": "2026-11-09",
-      "url": "http://gss.mof.gov.cn/gzdt/zhengcefabu/202611/t20261109_4004260.htm"
+      "url": "https://gss.mof.gov.cn/gzdt/zhengcefabu/202611/t20261109_4004260.htm"
     },
     {
       "source": "财政部",
@@ -128,40 +35,16 @@
       "url": "http://zyhj.mof.gov.cn/zcfb/202611/t20261103_4003960.htm"
     },
     {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见摩根士丹利集团董事长彭泰德",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516262373524/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长邹澜出席第五届国际金融领袖投资峰会",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516113533346/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行与印度尼西亚银行举行联合工作机制工作会议",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110515320167091/index.html"
-    },
-    {
       "source": "财政部",
       "title": "财政部关于实施《政府综合财务报告编制操作指南》的通知",
       "date": "2026-11-04",
-      "url": "http://gks.mof.gov.cn/guizhangzhidu/202611/t20261104_4004093.htm"
+      "url": "https://gks.mof.gov.cn/guizhangzhidu/202611/t20261104_4004093.htm"
     },
     {
       "source": "财政部",
       "title": "财政部关于实施《政府部门财务报告编制操作指南》的通知",
       "date": "2026-11-04",
-      "url": "http://gks.mof.gov.cn/guizhangzhidu/202611/t20261104_4004092.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "国务院关于金融工作情况的报告——2026年11月3日在十四届全国人民代表大会常...",
-      "date": "2026-11-03",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110510330636555/index.html"
+      "url": "https://gks.mof.gov.cn/guizhangzhidu/202611/t20261104_4004092.htm"
     },
     {
       "source": "财政部",
@@ -170,52 +53,16 @@
       "url": "http://jkw.mof.gov.cn/zhengcefabu/202610/t20261014_4002838.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于就国际会计准则理事会发布的金融工具准则实...",
-      "date": "2026-10-12",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261012_4002610.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《行政事业单位内部控制规范（修订征求...",
-      "date": "2026-10-09",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202610/t20261008_3998563.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《企业会计准则——会计科目和主要账务...",
-      "date": "2026-10-08",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260930_3998445.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《〈企业可持续披露准则第1号——气候（...",
-      "date": "2026-09-30",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260929_3998329.htm"
-    },
-    {
       "source": "财政部",
       "title": "财政部 中国人民银行 金融监管总局关于实施居民购房贷款贴息政策的通知",
       "date": "2026-09-29",
       "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202609/t20260929_3998312.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "强化协会职能作用 创新推动行业高质量发展 ——...",
-      "date": "2026-09-28",
-      "url": "http://kjs.mof.gov.cn/zhengcejiedu/202609/t20260924_3998130.htm"
-    },
-    {
-      "source": "财政部会计司",
-      "title": "关于征求《财政部关于加快推进会计数智化工作的...",
-      "date": "2026-09-22",
-      "url": "http://kjs.mof.gov.cn/gongzuotongzhi/202609/t20260921_3997874.htm"
-    },
-    {
       "source": "财政部",
       "title": "《紧急采购管理暂行办法》印发",
       "date": "2026-09-14",
-      "url": "http://gks.mof.gov.cn/guizhangzhidu/202609/t20260911_3997286.htm"
+      "url": "https://gks.mof.gov.cn/guizhangzhidu/202609/t20260911_3997286.htm"
     },
     {
       "source": "财政部",
@@ -236,16 +83,70 @@
       "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
     },
     {
-      "source": "财政部会计司",
-      "title": "关于印发《会计师事务所职业责任保险实施办法》...",
-      "date": "2026-08-28",
-      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260827_3996207.htm"
-    },
-    {
       "source": "财政部",
       "title": "非应税交易等增值税有关事项明确",
       "date": "2026-08-28",
-      "url": "http://szs.mof.gov.cn/zhengcefabu/202608/t20260828_3996295.htm"
+      "url": "https://szs.mof.gov.cn/zhengcefabu/202608/t20260828_3996295.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部制定实施《2027年政府收支分类科目》",
+      "date": "2026-08-27",
+      "url": "https://yss.mof.gov.cn/zhengceguizhang/202608/t20260826_3996140.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门联合发文部署进一步做好财政金融协同促内需政策有关工作",
+      "date": "2026-08-21",
+      "url": "http://jrs.mof.gov.cn/zhengcefabu/phjr/202608/t20260820_3995853.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《企业会计准则第30号——财务报表列报》修订印发",
+      "date": "2026-08-05",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202608/t20260805_3994927.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "四部门出台健全金融机构治理实施意见",
+      "date": "2026-07-31",
+      "url": "http://jrs.mof.gov.cn/zhengcefabu/gszl/202607/t20260731_3994642.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局关于调整部分能源资源行业企业城镇土地使用税政策的公告",
+      "date": "2026-07-28",
+      "url": "https://szs.mof.gov.cn/zhengcefabu/202607/t20260728_3994425.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局关于离岸信托 个人所得税有关事项的公告",
+      "date": "2026-07-24",
+      "url": "https://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994261.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部等三部门印发《征收挥发性有机物环境保护税试点实施办法》",
+      "date": "2026-07-24",
+      "url": "https://szs.mof.gov.cn/zhengcefabu/202607/t20260724_3994251.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "财政部 税务总局 工业和信息化部关于调整节能汽车、新能源汽车车船税优惠政策的公告",
+      "date": "2026-07-03",
+      "url": "https://szs.mof.gov.cn/zhengcefabu/202607/t20260703_3992823.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《管理会计应用指引第804号——财务共享服务》印发",
+      "date": "2026-07-01",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260630_3992536.htm"
+    },
+    {
+      "source": "财政部",
+      "title": "《企业会计准则解释第20号》印发",
+      "date": "2026-06-17",
+      "url": "http://kjs.mof.gov.cn/zhengcefabu/202606/t20260615_3991686.htm"
     }
   ]
 }
