@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "sources": [
     "国家税务总局",
     "财政部",
@@ -8,10 +8,28 @@
   ],
   "items": [
     {
+      "source": "中国人民银行",
+      "title": "中国人民银行有关部门负责人就 《大额存单管理办法》答记者问",
+      "date": "2026-11-27",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112715482536082/index.html"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行有关部门负责人就 《人民币存贷款利率管理规定》答记者问",
+      "date": "2026-11-27",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112715472222516/index.html"
+    },
+    {
       "source": "财政部会计司",
       "title": "加强企业会计准则制度建设实施 提升企业会计信息...",
       "date": "2026-11-27",
       "url": "http://kjs.mof.gov.cn/zhengcejiedu/202611/t20261126_4005500.htm"
+    },
+    {
+      "source": "中国人民银行",
+      "title": "中国人民银行发布《中国金融稳定报告（2026）》",
+      "date": "2026-11-27",
+      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026112718161199485/index.html"
     },
     {
       "source": "中国人民银行",
@@ -150,24 +168,6 @@
       "title": "《中央自然灾害救灾资金管理办法》修订印发",
       "date": "2026-11-06",
       "url": "http://zyhj.mof.gov.cn/zcfb/202611/t20261103_4003960.htm"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行行长潘功胜会见摩根士丹利集团董事长彭泰德",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516262373524/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行副行长邹澜出席第五届国际金融领袖投资峰会",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110516113533346/index.html"
-    },
-    {
-      "source": "中国人民银行",
-      "title": "中国人民银行与印度尼西亚银行举行联合工作机制工作会议",
-      "date": "2026-11-05",
-      "url": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026110515320167091/index.html"
     },
     {
       "source": "财政部",
